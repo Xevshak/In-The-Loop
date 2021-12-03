@@ -21,3 +21,9 @@ export const QUERY_QUESTION = gql`
 //     }
 //   }
 // `;
+
+
+// "title": "Is this a loop?",
+//       "question": "Pick your code and solve this",
+//       "answer": "A",
+//       "choices": ["A", "B", "C", "D"]

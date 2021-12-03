@@ -18,7 +18,6 @@ const userSchema = new Schema(
             type:String,
             required:true,
         },
-        questions: [questionsSchema],
         progress:{
             type:Array,
             required:false,

@@ -1,0 +1,23 @@
+import { gql } from '@apollo/client';
+
+export const QUERY_QUESTION = gql`
+  query question {
+    question {
+      _id
+      title
+      question
+    }
+  }
+`;
+
+// export const QUERY_USER = gql`
+//   query matchups($_id: String) {
+//     matchups(_id: $_id) {
+//       _id
+//       question1
+//       question2
+//       question1_votes
+//       question2_votes
+//     }
+//   }
+// `;

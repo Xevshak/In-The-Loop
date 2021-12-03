@@ -12,6 +12,14 @@ const questionSchema = new Schema({
      type: String,
      required: true
     },
+    choices: {
+     type: Array,
+     required: true
+    },
+    answer: {
+     type: String,
+     required: true
+    },
 });
 
 module.exports = questionSchema

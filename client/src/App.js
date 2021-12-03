@@ -1,14 +1,14 @@
-import React from 'react'
-import Home from './pages/Home'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import React from 'react';
+import Home from './pages/Home';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';
 
-import Login from './components/Login'
-import Signup from './components/Signup'
-import Footer from './components/Footer'
-import JavaScript from './components/JavaScript'
-import Dashboard from './pages/Dashboard'
-import Header from './components/Header'
+import Login from './components/pages/Login';
+import Signup from './components/pages/Signup';
+import Footer from './components/pages/Footer';
+import JavaScript from './components/pages/JavaScript';
+import Dashboard from './components/pages/Dashboard';
+import Header from './components/pages/Header';
 
 function App() {
   return (

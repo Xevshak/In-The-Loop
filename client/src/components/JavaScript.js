@@ -1,4 +1,6 @@
-import React from 'react'
+import React, {useState} from 'react'
+import Navbar from './Navbar'
+import Forloop from './Forloop'
 
 export default function JavaScript () {
     const [value, setValue] = useState('');

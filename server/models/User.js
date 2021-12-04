@@ -1,5 +1,7 @@
-const { Schema, model } = require('mongoose');
+const { Schema, model, isValidObjectId } = require('mongoose');
 const bcrypt = require('bcrypt');
+
+const ObjectId = Schema.Types.ObjectId;
 
 const userSchema = new Schema(
     {
@@ -12,16 +14,18 @@ const userSchema = new Schema(
             type:String,
             required:true,
             unique:true,
-            match:[/.+@+\..+/, 'Please use a valid human email address that is actually real, thnk you!']
+            match:[/.+@+\..+/, 'Please use a valid human email address that is actually real, thank you!']
         },
         password:{
             type:String,
             required:true,
         },
-        progress:{
-            type:Array,
-            required:false,
-        }
+        progress: [
+            {
+                type: ObjectId,
+                ref: 'Question'
+            }
+        ]
     }
 );
 

@@ -38,7 +38,12 @@ export const PROGRESS = gql`
     progress(questionId: $questionId, userId: $userId) {
       _id
       username
-      progress
+      progress {
+        _id
+        question
+        title
+        correct
+      }
     }
   }
 `

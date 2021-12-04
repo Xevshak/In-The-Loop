@@ -9,8 +9,8 @@ const db = require('./config/connections');
 const PORT = process.env.PORT || 3001;
 const app = express();
 const server = new ApolloServer({
-  typeDefs,
-  resolvers,
+    typeDefs,
+   resolvers,
   context: authMiddleware,
 });
 
@@ -20,12 +20,14 @@ res.sendFile(express.urlencoded({ extended: false }));
 res.sendFile(express.json());
 
 // Serve up static assets
+// If it doesnt work in build mode talk to Damien 
+// maybe use res.sendfile instead of app.use per damiens recommendation
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '../client/build')));
+  app.use(express.static(path.join(__dirname, '../client/build/index.html')));
+}else {
+  res.sendFile(path.join(__dirname, '../client/public/index.html'));
 }
-else {
-  res.sendFile(path.join(__dirname, '../client/public/'));
-}
+
 
 
 app.get('*', (req, res) => {

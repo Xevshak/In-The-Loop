@@ -23,7 +23,7 @@ const userSchema = new Schema(
         progress: [
             {
                 type: ObjectId,
-                ref: 'QuestionId'
+                ref: 'Question'
             }
         ]
     }

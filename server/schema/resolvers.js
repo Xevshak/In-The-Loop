@@ -16,7 +16,7 @@ const resolvers = {
   },
 
   Mutation: {
-    addUser: async (parent, args) => {
+    addUser: async (parent, { email, userName, password }) => {
       const user = await User.create(args);
       const token = signToken(user);
 
@@ -38,11 +38,13 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
-    saveBook: async (parent, { bookData }, context) => {
+    progress: async (parent, { questionId, userId }, context) => {
       if (context.user) {
         const updatedUser = await User.findByIdAndUpdate(
-          { _id: context.user._id },
-          { $push: { savedBooks: bookData } },
+          // { _id: context.user._id },
+          //remove after testing and uncomment line 44
+          { _id: userId },
+          { $push: { progress: questionId } },
           { new: true }
         );
 

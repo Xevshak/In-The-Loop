@@ -6,7 +6,7 @@ import './App.css';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Footer from './components/Footer';
-import JavaScript from './components/JavaScript';
+import JavaScript from './pages/JavaScript';
 import Dashboard from './pages/Dashboard';
 import Header from './components/Header';
 

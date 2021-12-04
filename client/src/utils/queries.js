@@ -1,14 +1,32 @@
 import { gql } from '@apollo/client';
 
-export const QUERY_QUESTION = gql`
-  query question {
-    question {
+export const QUERY_ME = gql`
+  query me {
+    me {
       _id
-      title
-      question
+      username
+      email
+      progress {
+        _id
+        title
+        question
+        correct
+      }
     }
   }
 `;
+
+
+
+// export const QUERY_QUESTION = gql`
+//   query question {
+//     question {
+//       _id
+//       title
+//       question
+//     }
+//   }
+// `;
 
 // export const QUERY_USER = gql`
 //   query matchups($_id: String) {

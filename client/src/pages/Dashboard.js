@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
-
+import "../Style/Dashboard.css"
 export default function Dashboard () {
     return(
         <div>

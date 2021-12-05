@@ -1,1 +1,7 @@
-/*helloworld*/
+#title {
+    font-size:40px;
+    font-family:'Minecraft', sans-serif;
+    color:white;
+    text-shadow: 5px 5px 1px black;
+    -webkit-text-stroke: 1px rgb(7, 7, 7);
+}

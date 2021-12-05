@@ -1,5 +1,5 @@
 import React from 'react'
-
+import "../Style/Forloop.css"
 export default function Forloop (props) {
     const creepers = [];
 

@@ -1,0 +1,11 @@
+.contribute {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  flex: row;
+}
+
+.contributors {
+  text-align: center;
+  list-style: none;
+}

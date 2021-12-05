@@ -6,7 +6,7 @@ import FormControl from '@mui/material/FormControl';
 import FormHelperText from '@mui/material/FormHelperText';
 import FormLabel from '@mui/material/FormLabel';
 import Button from '@mui/material/Button';
-
+import "../Style/Quiz.css"
 export default function Quiz() {
   const [value, setValue] = React.useState('');
   const [error, setError] = React.useState(false);

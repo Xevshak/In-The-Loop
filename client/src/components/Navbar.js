@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-
+import "../Style/Navbar.css"
 export default function Navbar () {
     const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);

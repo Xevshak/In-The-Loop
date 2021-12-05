@@ -2,9 +2,9 @@ const db = require('../config/connections');
 const { Question } = require('../models');
 
 const questionData = require('./questionData.json');
-
+// Working on db await function 
 db.once('open', async () => {
-    await Question.deleteMany({});
+    // await Question.deleteMany({});
 
     const questions = await Question.insertMany(questionData);
 

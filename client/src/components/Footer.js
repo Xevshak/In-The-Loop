@@ -7,14 +7,20 @@ export default function Footer () {
         <ul className="contributors">
             <p>Back End Developers</p>
             <li>Bradley</li>
-            <i className="fab fa-linkedin"></i>
-            <i className="fab fa-github"></i>
+            <a href="https://www.linkedin.com/in/bradley-o-dell-b3857b96/" target="_blank" rel="noreferrer"  >
+            <i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/BradMW" target="_blank" rel="noreferrer" >
+            <i class="fab fa-github"></i></a>
             <li>Chamo</li>
-            <i className="fab fa-linkedin"></i>
-            <i className="fab fa-github"></i>
+            <a href="www.linkedin.com/" target="_blank" rel="noreferrer"  >
+            <i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/" target="_blank" rel="noreferrer" >
+            <i class="fab fa-github"></i></a>
             <li>Keshav</li>
-            <i className="fab fa-linkedin"></i>
-            <i className="fab fa-github"></i>
+            <a href="www.linkedin.com/" target="_blank" rel="noreferrer"  >
+            <i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Xevshak" target="_blank" rel="noreferrer" >
+            <i class="fab fa-github"></i></a>
         </ul>
         <ul className='contributors'>    
             <p>Front End Developers</p>

@@ -50,7 +50,7 @@ function App() {
       <Header/>
         <div>
           <Route exact path="/"><Home/></Route>
-          <Route exact path="/login"><Login/></Route>
+          {/* <Route exact path="/login"><Login/></Route> */}
           <Route exact path="/signup"><Signup/></Route>
           <Route exact path="/js"><JavaScript/></Route>
           <Route exact path="/dashboard"><Dashboard/></Route>

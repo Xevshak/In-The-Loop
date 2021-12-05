@@ -16,16 +16,16 @@ const server = new ApolloServer({
 
 server.applyMiddleware({ app });
 
-res.sendFile(express.urlencoded({ extended: false }));
-res.sendFile(express.json());
+// res.sendFile(express.urlencoded({ extended: false }));
+// res.sendFile(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 // Serve up static assets
 // If it doesnt work in build mode talk to Damien 
 // maybe use res.sendfile instead of app.use per damiens recommendation
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../client/build/index.html')));
-}else {
-  res.sendFile(path.join(__dirname, '../client/public/index.html'));
 }
 
 app.get('*', (req, res) => {

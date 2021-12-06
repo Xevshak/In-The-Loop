@@ -1,13 +1,13 @@
 const express = require('express');
 const { ApolloServer } = require('apollo-server-express');
 const path = require('path');
-
-const { typeDefs, resolvers } = require('./schema');
-const { authMiddleware } = require('./utils/auth');
-const db = require('./config/connections');
-
 const PORT = process.env.PORT || 3001;
 const app = express();
+const db = require('./config/connection'); //checked
+const { typeDefs, resolvers } = require('./schema'); //checked
+const { authMiddleware } = require('./utils/auth'); //checked
+
+
 const server = new ApolloServer({
     typeDefs,
    resolvers,
@@ -16,20 +16,27 @@ const server = new ApolloServer({
 
 server.applyMiddleware({ app });
 
-res.sendFile(express.urlencoded({ extended: false }));
-res.sendFile(express.json());
+// res.sendFile(express.urlencoded({ extended: false }));
+// res.sendFile(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 // Serve up static assets
 // If it doesnt work in build mode talk to Damien 
 // maybe use res.sendfile instead of app.use per damiens recommendation
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '../client/build/index.html')));
-}else {
-  res.sendFile(path.join(__dirname, '../client/public/index.html'));
-}
+// if (process.env.NODE_ENV === 'production') {
+//   app.sendFile(express.static(path.join(__dirname, '../client/build/index.html')));
+// //}else {
+//   //res.sendFile(path.join(__dirname, '../client/public/index.html'));
+// }
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../client/build/index.html'));
+  if (process.env.NODE_ENV === 'production') {
+    res.sendFile(path.join(__dirname, '../client/build/index.html'));
+  }else {
+    res.sendFile(path.join(__dirname, '../client/public/index.html'));
+  }
+  // res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
 
 db.once('open', () => {

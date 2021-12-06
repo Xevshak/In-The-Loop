@@ -1,42 +1,35 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
+import { Link } from 'react-router-dom';
 import { LOGIN_USER } from '../utils/mutations';
-
 import Auth from '../utils/auth';
 
-const Login = (props) => {
+function Login(props) {
   const [formState, setFormState] = useState({ email: '', password: '' });
   const [login, { error, data }] = useMutation(LOGIN_USER);
+  console.log('create data');
 
-  // update state based on form input changes
+  const handleFormSubmit = async (event) => {
+    console.log('default??')
+    event.preventDefault();
+    console.log('submit')
+    try {
+      const mutationResponse = await login({
+        variables: { email: formState.email, password: formState.password },
+      });
+      const token = mutationResponse.data.login.token;
+      console.log('create token');
+      Auth.login(token);
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
   const handleChange = (event) => {
     const { name, value } = event.target;
-
     setFormState({
       ...formState,
       [name]: value,
-    });
-  };
-
-  // submit form
-  const handleFormSubmit = async (event) => {
-    event.preventDefault();
-    console.log(formState);
-    try {
-      const { data } = await login({
-        variables: { ...formState },
-      });
-
-      Auth.login(data.login.token);
-    } catch (e) {
-      console.error(e);
-    }
-
-    // clear form values
-    setFormState({
-      email: '',
-      password: '',
     });
   };
 
@@ -74,7 +67,8 @@ const Login = (props) => {
                   style={{ cursor: 'pointer' }}
                   type="submit"
                 >
-                 <Link to={`/dashboard`}>Submit</Link>
+                  {/* the button can't link to dashboard or it executes without a login */}
+                 {/* <Link to={`/dashboard`}>Submit</Link> */}
                 </button>
               </form>
             )}

@@ -1,1 +1,7 @@
-/*helloworld*/
+#title {
+    font-size:80px;
+    font-family:'Minecraft Evenings';
+    color:#C7BCB9;
+    text-shadow: 5px 5px 1px #525255;
+    -webkit-text-stroke: 1px rgb(7, 7, 7);
+}

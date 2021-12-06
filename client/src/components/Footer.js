@@ -5,7 +5,7 @@ export default function Footer () {
     return(
         <div>
         <footer className="contribute">
-        <ul className="contributors">
+        {/* <ul className="contributors">
             <p>Back End Developers</p>
             <li>Bradley</li>
             <a href="https://www.linkedin.com/in/bradley-o-dell-b3857b96/" target="_blank" rel="noreferrer"  >
@@ -38,7 +38,7 @@ export default function Footer () {
             <a href="https://github.com/CortezStephanie" target="_blank" rel="noreferrer" >
             <i class="fab fa-github"></i></a>
 
-        </ul>
+        </ul> */}
         </footer>
     </div>
     )

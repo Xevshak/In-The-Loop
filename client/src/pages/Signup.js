@@ -49,7 +49,7 @@ const Signup = () => {
             {data ? (
               <p>
                 Success! You may now head{' '}
-                <Link to="/">back to the homepage.</Link>
+                
               </p>
             ) : (
               <form onSubmit={handleFormSubmit}>
@@ -82,7 +82,7 @@ const Signup = () => {
                   style={{ cursor: 'pointer' }}
                   type="submit"
                 >
-                  Submit
+                  <Link to={`/dashboard`}>Submit</Link> 
                 </button>
               </form>
             )}

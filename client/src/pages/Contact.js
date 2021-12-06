@@ -1,10 +1,11 @@
 import React from 'react'
+import Link from '@mui/material/Link'
 import '../Style/Contact.css'
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
+//import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box'
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -13,6 +14,7 @@ import bradimg from '../images/Brad.jpg'
 //import Navbar from '../components/Navbar'
 
 export default function Contact () {
+
 
 
     return(
@@ -34,8 +36,7 @@ export default function Contact () {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
+        <Link href="https://github.com/CortezStephanie"><GitHubIcon/></Link>
       </CardActions>
     </Card>
     <Card sx={{ maxWidth: 345, margin: 1 }}>
@@ -54,8 +55,7 @@ export default function Contact () {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
+        <Link href="https://github.com/CortezStephanie"><GitHubIcon/></Link>
       </CardActions>
     </Card>
     <Card sx={{ maxWidth: 345, margin: 1 }}>
@@ -74,8 +74,7 @@ export default function Contact () {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
+        <Link href="https://github.com/CortezStephanie"><GitHubIcon/></Link>
       </CardActions>
     </Card>
     <Card sx={{ maxWidth: 345, margin: 1 }}>
@@ -94,8 +93,7 @@ export default function Contact () {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
+        <Link href="https://github.com/CortezStephanie"><GitHubIcon/></Link>
       </CardActions>
     </Card>
     <Card sx={{ maxWidth: 345, margin: 1 }}>
@@ -114,9 +112,7 @@ export default function Contact () {
         </Typography>
       </CardContent>
       <CardActions>
-      <GitHubIcon onClick={event =>  window.open.href='https://github.com/CortezStephanie'} >
-
-      </GitHubIcon>
+        <Link href="https://github.com/CortezStephanie"><GitHubIcon/></Link>
       </CardActions>
     </Card>
     </Box>

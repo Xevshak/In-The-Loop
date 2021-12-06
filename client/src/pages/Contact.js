@@ -6,17 +6,19 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-// import GitHubIcon from '@mui/icons-material/GitHub';
+import Box from '@mui/material/Box'
+import GitHubIcon from '@mui/icons-material/GitHub';
 import stephimg from '../images/Steph.jpg'
 import bradimg from '../images/Brad.jpg'
 //import Navbar from '../components/Navbar'
 
 export default function Contact () {
 
-    
+
     return(
         <div>
-<Card sx={{ maxWidth: 345 }}>
+            <Box sx={{ display: 'flex', flexWrap:'wrap', justifyContent: 'center', p:1, m: 1}}>
+<Card sx={{ maxWidth: 345, margin: 1 }}>
       <CardMedia
         component="img"
         height="140"
@@ -36,7 +38,7 @@ export default function Contact () {
         <Button size="small">Learn More</Button>
       </CardActions>
     </Card>
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 345, margin: 1 }}>
       <CardMedia
         component="img"
         height="140"
@@ -56,7 +58,7 @@ export default function Contact () {
         <Button size="small">Learn More</Button>
       </CardActions>
     </Card>
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 345, margin: 1 }}>
       <CardMedia
         component="img"
         height="140"
@@ -76,7 +78,7 @@ export default function Contact () {
         <Button size="small">Learn More</Button>
       </CardActions>
     </Card>
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 345, margin: 1 }}>
       <CardMedia
         component="img"
         height="140"
@@ -96,7 +98,7 @@ export default function Contact () {
         <Button size="small">Learn More</Button>
       </CardActions>
     </Card>
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 345, margin: 1 }}>
       <CardMedia
         component="img"
         height="140"
@@ -112,10 +114,12 @@ export default function Contact () {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
+      <GitHubIcon onClick={event =>  window.open.href='https://github.com/CortezStephanie'} >
+
+      </GitHubIcon>
       </CardActions>
     </Card>
+    </Box>
         </div>
     )
 }

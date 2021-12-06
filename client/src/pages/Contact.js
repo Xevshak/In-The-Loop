@@ -10,12 +10,13 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box'
 import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Grid from '@mui/material/Grid'
 import Bradimg from '../images/Brad.jpg'
 import Chrisimg from '../images/Chris.PNG'
 import Keshavimg from '../images/Keshav.PNG'
 import  Chamoimg from '../images/Chamo.PNG'
-import  Stephimg from '../images/Steph.PNG'
+import  Stephimg from '../images/Stephimg.jpg'
 
 import Navbar from '../components/Navbar'
 
@@ -28,7 +29,7 @@ export default function Contact () {
             <Navbar/>
             <Box sx={{m: 1}}>
               <Grid>
-<Card sx={{ maxWidth: 345, margin: 1/*, display:grid, gridRow: "1/3", gridColumn: "1/3"*/ }} style={{ background: '#C7BCB9', border: 'solid'}}>
+<Card id="Cards" sx={{ maxWidth: 345, margin: 1/*, display:grid, gridRow: "1/3", gridColumn: "1/3"*/ }} style={{ background: '#C7BCB9', border: 'solid'}}>
       <CardMedia
         component="img"
         height="250"
@@ -46,10 +47,11 @@ export default function Contact () {
       </CardContent>
       <CardActions>
         <Link href="https://github.com/BradMW" target="_blank"><GitHubIcon/></Link>
+        <Link href="https://www.linkedin.com/in/bradley-o-dell-b3857b96/" target="_blank"><LinkedInIcon/></Link>
       </CardActions>
     </Card>
     </Grid>
-    <Card sx={{ maxWidth: 345, margin: 1/*, display: grid, gridRow: "1/3", gridColumn: "1/3"*/ }} style={{ background: '#C7BCB9', border: 'solid' }}>
+    <Card id="Cards" sx={{ maxWidth: 345, margin: 1/*, display: grid, gridRow: "1/3", gridColumn: "1/3"*/ }} style={{ background: '#C7BCB9', border: 'solid' }}>
       <CardMedia
         component="img"
         height="250"
@@ -66,10 +68,11 @@ export default function Contact () {
         </Typography>
       </CardContent>
       <CardActions>
-        <Link href="https://github.com/" target="_blank"><GitHubIcon/></Link>
+        <Link href="https://github.com/YamCham0" target="_blank"><GitHubIcon/></Link>
+        <Link href="https://www.linkedin.com/in/yamcham0-bab408220/" target="_blank"><LinkedInIcon/></Link>
       </CardActions>
     </Card>
-    <Card sx={{ maxWidth: 345, margin: 1/*, display: grid, gridRow: "1/3", gridColumn: "1/3"*/ }} style={{ background: '#C7BCB9', border: 'solid' }}>
+    <Card id="Cards" sx={{ maxWidth: 345, margin: 1/*, display: grid, gridRow: "1/3", gridColumn: "1/3"*/ }} style={{ background: '#C7BCB9', border: 'solid' }}>
       <CardMedia
         component="img"
         height="250"
@@ -86,10 +89,11 @@ export default function Contact () {
         </Typography>
       </CardContent>
       <CardActions>
-        <Link href="https://github.com/Xevshak" target="_blank"><GitHubIcon/></Link>
+        <Link href="https://github.com/chris79kennard" target="_blank"><GitHubIcon/></Link>
+        <Link href="https://www.linkedin.com/in/christopher-kennard-13a479213/" target="_blank"><LinkedInIcon/></Link>
       </CardActions>
     </Card>
-    <Card sx={{ maxWidth: 345, margin: 1 /*, display: grid, gridRow: "1/3", gridColumn: "1/3",*/}} style={{ background: '#C7BCB9', border: 'solid' }}>
+    <Card id="Cards" sx={{ maxWidth: 345, margin: 1 /*, display: grid, gridRow: "1/3", gridColumn: "1/3",*/}} style={{ background: '#C7BCB9', border: 'solid' }}>
       
       <CardMedia
         component="img"
@@ -107,12 +111,12 @@ export default function Contact () {
         </Typography>
       </CardContent>
       <CardActions>
-        <Link href="https://github.com/chris79kennard" target="_blank"><GitHubIcon/></Link>
+        <Link href="https://github.com/Xevshak" target="_blank"><GitHubIcon/></Link>
+        <Link href="https://www.linkedin.com/in/keshav-krishnan-ba5a40145/" target="_blank"><LinkedInIcon/></Link>
       </CardActions>
     </Card>
-    <Card sx={{ maxWidth: 345, maxHeight:345, margin: 1/*, display: grid, gridRow: "1/3", gridColumn: "1/3"*/}}
-    style={{ background: '#C7BCB9', border: 'solid' }}
-    >
+    <Card id="Cards" sx={{ maxWidth: 345, margin: 1 /*, display: grid, gridRow: "1/3", gridColumn: "1/3",*/}} style={{ background: '#C7BCB9', border: 'solid' }}>
+      
       <CardMedia
         component="img"
         height="250"
@@ -125,13 +129,15 @@ export default function Contact () {
           Stephanie
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          Lizards
+         Full-Stack Web Developer absolute beast at all things Front End and still growing on the Back End!
         </Typography>
       </CardContent>
       <CardActions>
-        <Link href="https://github.com/" target="_blank"><GitHubIcon/></Link>
+        <Link href="https://github.com/CortezStephanie" target="_blank"><GitHubIcon/></Link>
+        <Link href="https://www.linkedin.com/in/stephanie-cortez-660b9821b/" target="_blank"><LinkedInIcon/></Link>
       </CardActions>
     </Card>
+    
     </Box>
     
         </div>

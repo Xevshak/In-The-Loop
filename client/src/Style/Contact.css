@@ -1,0 +1,6 @@
+#Cards {
+  color: aqua;
+  position: relative;
+  justify-content: center;
+  flex-direction: row;
+}

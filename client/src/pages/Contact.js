@@ -28,7 +28,7 @@ export default function Contact () {
             <Navbar/>
             <Box sx={{m: 1}}>
               <Grid>
-<Card sx={{ maxWidth: 345, margin: 1/*, display:grid, gridRow: "1/3", gridColumn: "1/3"*/ }}>
+<Card sx={{ maxWidth: 345, margin: 1/*, display:grid, gridRow: "1/3", gridColumn: "1/3"*/ }} style={{ background: '#C7BCB9', border: 'solid'}}>
       <CardMedia
         component="img"
         height="250"
@@ -49,7 +49,7 @@ export default function Contact () {
       </CardActions>
     </Card>
     </Grid>
-    <Card sx={{ maxWidth: 345, margin: 1/*, display: grid, gridRow: "1/3", gridColumn: "1/3"*/ }}>
+    <Card sx={{ maxWidth: 345, margin: 1/*, display: grid, gridRow: "1/3", gridColumn: "1/3"*/ }} style={{ background: '#C7BCB9', border: 'solid' }}>
       <CardMedia
         component="img"
         height="250"
@@ -69,7 +69,7 @@ export default function Contact () {
         <Link href="https://github.com/" target="_blank"><GitHubIcon/></Link>
       </CardActions>
     </Card>
-    <Card sx={{ maxWidth: 345, margin: 1/*, display: grid, gridRow: "1/3", gridColumn: "1/3"*/ }}>
+    <Card sx={{ maxWidth: 345, margin: 1/*, display: grid, gridRow: "1/3", gridColumn: "1/3"*/ }} style={{ background: '#C7BCB9', border: 'solid' }}>
       <CardMedia
         component="img"
         height="250"
@@ -89,7 +89,8 @@ export default function Contact () {
         <Link href="https://github.com/Xevshak" target="_blank"><GitHubIcon/></Link>
       </CardActions>
     </Card>
-    <Card sx={{ maxWidth: 345, margin: 1 /*, display: grid, gridRow: "1/3", gridColumn: "1/3",*/}}>
+    <Card sx={{ maxWidth: 345, margin: 1 /*, display: grid, gridRow: "1/3", gridColumn: "1/3",*/}} style={{ background: '#C7BCB9', border: 'solid' }}>
+      
       <CardMedia
         component="img"
         height="250"
@@ -109,7 +110,9 @@ export default function Contact () {
         <Link href="https://github.com/chris79kennard" target="_blank"><GitHubIcon/></Link>
       </CardActions>
     </Card>
-    <Card sx={{ maxWidth: 345, maxHeight:345, margin: 1/*, display: grid, gridRow: "1/3", gridColumn: "1/3"*/}}>
+    <Card sx={{ maxWidth: 345, maxHeight:345, margin: 1/*, display: grid, gridRow: "1/3", gridColumn: "1/3"*/}}
+    style={{ background: '#C7BCB9', border: 'solid' }}
+    >
       <CardMedia
         component="img"
         height="250"

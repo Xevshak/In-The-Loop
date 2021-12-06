@@ -6,7 +6,8 @@ import Auth from '../utils/auth';
 
 function Login(props) {
   const [formState, setFormState] = useState({ email: '', password: '' });
-  const [login, { error, data }] = useMutation(LOGIN_USER);
+  const [login, { error }] = useMutation(LOGIN_USER);
+  console.log(login, { error });
   console.log('create data');
 
   const handleFormSubmit = async (event) => {
@@ -15,11 +16,13 @@ function Login(props) {
     console.log('submit')
     try {
       const mutationResponse = await login({
-        variables: { email: formState.email, password: formState.password },
+        variables: { ...formState },
       });
       const token = mutationResponse.data.login.token;
-      console.log('create token');
+      console.log(mutationResponse);
+      console.log(token);
       Auth.login(token);
+
     } catch (e) {
       console.log(e);
     }
@@ -39,7 +42,7 @@ function Login(props) {
         <div className="card">
           <h4 className="card-header bg-dark text-light p-2">Login</h4>
           <div className="card-body">
-            {data ? (
+             (
               <p>
                 Success! You may now head{' '}
                 <Link to="/login">back to the homepage.</Link>
@@ -71,7 +74,7 @@ function Login(props) {
                  {/* <Link to={`/dashboard`}>Submit</Link> */}
                 </button>
               </form>
-            )}
+            )
 
             {error && (
               <div className="my-3 p-3 bg-danger text-white">

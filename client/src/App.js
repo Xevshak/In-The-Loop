@@ -54,7 +54,7 @@ function App() {
           <Route exact path="/signup"><Signup/></Route>
           <Route exact path="/js"><JavaScript/></Route>
           <Route exact path="/dashboard"><Dashboard/></Route>
-          <Route exact path="/contact"><Contact/></Route>
+          <Route exact path="/contacts"><Contact/></Route>
         </div>
       <Footer/>  
     </Router>

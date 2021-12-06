@@ -42,6 +42,7 @@ export default function Navbar () {
         <MenuItem  onClick={handleClose}><Link to={`/js`}>JavaScript</Link></MenuItem>
         <MenuItem onClick={handleClose}>CSS</MenuItem>
         <MenuItem onClick={handleClose}>HTML</MenuItem>
+        <MenuItem  onClick={handleClose}><Link to={`/contacts`}>Contact Us</Link></MenuItem>
         <MenuItem  onClick={handleClose}><Link to={`/`}>Sign Out</Link></MenuItem>
       </Menu>
     </div>

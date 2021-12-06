@@ -9,12 +9,13 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 import './App.css';
-
+// pages
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import JavaScript from './pages/JavaScript';
 import Dashboard from './pages/Dashboard';
-
+import Contact from './pages/Contact'
+// components
 import Footer from './components/Footer';
 import Header from './components/Header';
 
@@ -41,9 +42,8 @@ const client = new ApolloClient({
   link: authLink.concat(httpLink),
   cache: new InMemoryCache(),
 });
-
+// props.image.
 function App() {
-
   return (
     <ApolloProvider client={client}>
     <Router>
@@ -54,6 +54,7 @@ function App() {
           <Route exact path="/signup"><Signup/></Route>
           <Route exact path="/js"><JavaScript/></Route>
           <Route exact path="/dashboard"><Dashboard/></Route>
+          <Route exact path="/contacts"><Contact/></Route>
         </div>
       <Footer/>  
     </Router>

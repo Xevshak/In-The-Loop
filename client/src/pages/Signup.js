@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
 
 import Auth from '../utils/auth';
 
-const Signup = () => {
+function Signup(props) {
   const [formState, setFormState] = useState({
-    name: '',
+    username: '',
     email: '',
     password: '',
   });
@@ -31,8 +31,9 @@ const Signup = () => {
 
     try {
       const { data } = await addUser({
-        variables: { ...formState },
+        variables: { username: formState.username,  email: formState.email, password: formState.password},
       });
+      console.log(formState);
 
       Auth.login(data.addUser.token);
     } catch (e) {
@@ -46,7 +47,7 @@ const Signup = () => {
         <div className="card">
           <h4 className="card-header bg-dark text-light p-2">Sign Up</h4>
           <div className="card-body">
-            {data ? (
+              {data ?(
               <p>
                 Success! You may now head{' '}
                 
@@ -56,9 +57,9 @@ const Signup = () => {
                 <input
                   className="form-input"
                   placeholder="Your username"
-                  name="name"
+                  name="username"
                   type="text"
-                  value={formState.name}
+                  value={formState.username}
                   onChange={handleChange}
                 />
                 <input
@@ -82,10 +83,10 @@ const Signup = () => {
                   style={{ cursor: 'pointer' }}
                   type="submit"
                 >
-                  <Link to={`/dashboard`}>Submit</Link> 
+                  {/* <Link to={`/dashboard`}>Submit</Link>  */}
                 </button>
               </form>
-            )}
+            )};
 
             {error && (
               <div className="my-3 p-3 bg-danger text-white">

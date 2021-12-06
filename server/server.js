@@ -10,8 +10,13 @@ const { authMiddleware } = require('./utils/auth'); //checked
 
 const server = new ApolloServer({
     typeDefs,
-   resolvers,
+    resolvers,
   context: authMiddleware,
+  headers: {
+    'Content-Type': 'application/json',
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Credentials': true,
+    'Content-Type': 'application/graphql',  },
 });
 
 server.applyMiddleware({ app });

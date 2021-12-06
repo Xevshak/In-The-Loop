@@ -1,4 +1,5 @@
-const { Schema, model, isValidObjectId } = require('mongoose');
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema
 const bcrypt = require('bcrypt');
 
 const ObjectId = Schema.Types.ObjectId;
@@ -14,7 +15,7 @@ const userSchema = new Schema(
             type:String,
             required:true,
             unique:true,
-            match:[/.+@+\..+/, 'Please use a valid human email address that is actually real, thank you!']
+            match:[/.+@.+\..+/, 'Please use a valid human email address that is actually real, thank you!']
         },
         password:{
             type:String,
@@ -43,7 +44,7 @@ userSchema.methods.isCorrectPassword = async function (password) {
   return bcrypt.compare(password, this.password);
 };
 
-const User = model('User', userSchema);
+const User = mongoose.model('User', userSchema);
 
 module.exports = User;
 

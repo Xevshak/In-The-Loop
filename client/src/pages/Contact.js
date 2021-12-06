@@ -9,9 +9,8 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box'
 import GitHubIcon from '@mui/icons-material/GitHub';
-import stephimg from '../images/Steph.jpg'
 import bradimg from '../images/Brad.jpg'
-//import Navbar from '../components/Navbar'
+import Navbar from '../components/Navbar'
 
 export default function Contact () {
 
@@ -19,7 +18,8 @@ export default function Contact () {
 
     return(
         <div>
-            <Box sx={{ display: 'flex', flexWrap:'wrap', justifyContent: 'center', p:1, m: 1}}>
+            <Navbar/>
+            <Box sx={{m: 1}}>
 <Card sx={{ maxWidth: 345, margin: 1 }}>
       <CardMedia
         component="img"
@@ -36,7 +36,7 @@ export default function Contact () {
         </Typography>
       </CardContent>
       <CardActions>
-        <Link href="https://github.com/CortezStephanie"><GitHubIcon/></Link>
+        <Link href="https://github.com/BradMW" target="_blank"><GitHubIcon/></Link>
       </CardActions>
     </Card>
     <Card sx={{ maxWidth: 345, margin: 1 }}>
@@ -55,7 +55,7 @@ export default function Contact () {
         </Typography>
       </CardContent>
       <CardActions>
-        <Link href="https://github.com/CortezStephanie"><GitHubIcon/></Link>
+        <Link href="https://github.com/" target="_blank"><GitHubIcon/></Link>
       </CardActions>
     </Card>
     <Card sx={{ maxWidth: 345, margin: 1 }}>
@@ -74,7 +74,7 @@ export default function Contact () {
         </Typography>
       </CardContent>
       <CardActions>
-        <Link href="https://github.com/CortezStephanie"><GitHubIcon/></Link>
+        <Link href="https://github.com/Xevshak" target="_blank"><GitHubIcon/></Link>
       </CardActions>
     </Card>
     <Card sx={{ maxWidth: 345, margin: 1 }}>
@@ -93,26 +93,7 @@ export default function Contact () {
         </Typography>
       </CardContent>
       <CardActions>
-        <Link href="https://github.com/CortezStephanie"><GitHubIcon/></Link>
-      </CardActions>
-    </Card>
-    <Card sx={{ maxWidth: 345, margin: 1 }}>
-      <CardMedia
-        component="img"
-        height="140"
-        image= {stephimg}
-        alt="green iguana"
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Stephanie
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          Lizards
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Link href="https://github.com/CortezStephanie"><GitHubIcon/></Link>
+        <Link href="https://github.com/chris79kennard" target="_blank"><GitHubIcon/></Link>
       </CardActions>
     </Card>
     </Box>

@@ -1,6 +1,6 @@
 #title {
   max-width: fit-content;
-  background-color: #04BFAD;
+  background-color: none;
   font-size: 60px;
   font-family: 'Minecraft Evenings';
   color: #C7BCB9;
@@ -9,7 +9,7 @@
   -webkit-text-stroke: 0.1px rgb(41, 40, 40);
   border: 4mm ridge #04D939;
   position: relative;
+  text-align: center;
   justify-content: center;
-  left: 50%;
-  right: 50%;
+  left: 1rem;
 }

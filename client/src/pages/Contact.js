@@ -25,7 +25,7 @@ export default function Contact () {
 
 
     return(
-        <div>
+        <div id="backgroundImg">
             <Navbar/>
             <div id="header">This WorkBook was brought to you by these amazing Full Stack Developers!</div>
             <Box id="flexRow"sx={{m: 1}}>

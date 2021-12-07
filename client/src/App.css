@@ -1,7 +1,7 @@
 body {
-  background-image: url('./images/backgroundimg.jpg');
-  max-height: fit-content;
-  max-width: fit-content;
+  /* background-image: url('./images/backgroundimg.jpg');
+  background-size: cover;
   height: 100%;
-  width: 50%;
+  width: 50%; */
+  background-color: #02f8e0;
 }

@@ -27,6 +27,12 @@ export default function Quiz() {
     } else if (value === 'worst') {
       setHelperText('Sorry, wrong answer!');
       setError(true);
+    } else if (value === 'worst1') {
+      setHelperText('Sorry, wrong answer!');
+      setError(true);
+    } else if (value === 'worst2') {
+      setHelperText('Sorry, wrong answer!');
+      setError(true);
     } else {
       setHelperText('Please select an option.');
       setError(true);
@@ -41,21 +47,25 @@ export default function Quiz() {
         error={error}
         variant="standard"
       >
-        <FormLabel component="legend">Pop quiz: MUI is...</FormLabel>
+        <FormLabel component="legend">Which one of the following is a functional for loop?</FormLabel>
         <RadioGroup
           aria-label="quiz"
           name="quiz"
           value={value}
           onChange={handleRadioChange}
         >
-          <FormControlLabel value="best" control={<Radio />} label="The best!" />
-          <FormControlLabel value="worst" control={<Radio />} label="The worst." />
+          <FormControlLabel value="best" control={<Radio />} label="for (let i = 0; i < arr.length; i++)" />
+          <FormControlLabel value="worst" control={<Radio />} label="for (let 0 = i; i < arr.length; i++)" />
+          <FormControlLabel value="worst1" control={<Radio />} label="for (i = 0; i < arr.length; i++)" />
+          <FormControlLabel value="worst2" control={<Radio />} label="for (let 0 = 1; i < arr.length; i-+)" />
         </RadioGroup>
         <FormHelperText>{helperText}</FormHelperText>
         <Button sx={{ mt: 1, mr: 1 }} type="submit" variant="outlined">
           Check Answer
         </Button>
       </FormControl>
+
+      
     </form>
   );
 }

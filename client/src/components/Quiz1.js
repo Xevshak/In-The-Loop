@@ -7,7 +7,7 @@ import FormHelperText from '@mui/material/FormHelperText';
 import FormLabel from '@mui/material/FormLabel';
 import Button from '@mui/material/Button';
 
-export default function Quiz() {
+export default function Quiz1() {
   const [value, setValue] = React.useState('');
   const [error, setError] = React.useState(false);
   const [helperText, setHelperText] = React.useState('Choose wisely');
@@ -24,10 +24,13 @@ export default function Quiz() {
     if (value === 'best') {
       setHelperText('You got it!');
       setError(false);
-    } else if (value === 'worst') {
+    } else if (value === 'worst2') {
       setHelperText('Sorry, wrong answer!');
       setError(true);
-    } else {
+    } else if (value === 'worst3') {
+      setHelperText('Sorry, wrong answer!');
+      setError(true);}
+      else {
       setHelperText('Please select an option.');
       setError(true);
     }
@@ -48,8 +51,9 @@ export default function Quiz() {
           value={value}
           onChange={handleRadioChange}
         >
-          <FormControlLabel value="best" control={<Radio />} label="The best!" />
-          <FormControlLabel value="worst" control={<Radio />} label="The worst." />
+          <FormControlLabel value="best" control={<Radio />} label="Keshav has great hair" />
+          <FormControlLabel value="worst2" control={<Radio />} label="The worst." />
+          <FormControlLabel value="worst3" control={<Radio />} label="Keshav has great hair" />
         </RadioGroup>
         <FormHelperText>{helperText}</FormHelperText>
         <Button sx={{ mt: 1, mr: 1 }} type="submit" variant="outlined">

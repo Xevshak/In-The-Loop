@@ -1,3 +1,7 @@
 .loginBtn {
     width: 30vw;
 }
+
+.loginBtn:hover {
+    background-color:green;
+}

@@ -9,8 +9,8 @@ const { authMiddleware } = require('./utils/auth'); //checked
 
 
 const server = new ApolloServer({
-    typeDefs,
-    resolvers,
+  typeDefs,
+  resolvers,
   context: authMiddleware,
   headers: {
     'Content-Type': 'application/json',

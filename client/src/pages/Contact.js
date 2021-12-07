@@ -29,7 +29,7 @@ export default function Contact () {
             <Navbar/>
             <Box sx={{m: 1}}>
               <Grid>
-<Card id="Cards" sx={{ maxWidth: 345, margin: 1/*, display:grid, gridRow: "1/3", gridColumn: "1/3"*/ }} style={{ background: '#C7BCB9', border: 'solid'}}>
+<Card id="Cards" sx={{ maxWidth: 150, maxHeight: 300, margin: 1/*, display:grid, gridRow: "1/3", gridColumn: "1/3"*/ }} style={{ background: '#C7BCB9', border: 'solid'}}>
       <CardMedia
         component="img"
         height="250"
@@ -42,7 +42,7 @@ export default function Contact () {
           Bradley
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          Lizards
+        Full Stack Developer who will lead this generation into the future of Realism VR.
         </Typography>
       </CardContent>
       <CardActions>
@@ -51,20 +51,20 @@ export default function Contact () {
       </CardActions>
     </Card>
     </Grid>
-    <Card id="Cards" sx={{ maxWidth: 345, margin: 1/*, display: grid, gridRow: "1/3", gridColumn: "1/3"*/ }} style={{ background: '#C7BCB9', border: 'solid' }}>
+    <Card id="Cards" sx={{maxWidth: 150, maxHeight: 300, margin: 1/*, display: grid, gridRow: "1/3", gridColumn: "1/3"*/ }} style={{ background: '#C7BCB9', border: 'solid' }}>
       <CardMedia
         component="img"
         height="250"
         width="100"
         image={Chamoimg}
-        alt="green iguana"
+        alt="Image of Chamo"
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
           Chamo
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          Lizards
+         Full Stack Developer who loves to code in the name of Science!
         </Typography>
       </CardContent>
       <CardActions>
@@ -72,7 +72,7 @@ export default function Contact () {
         <Link href="https://www.linkedin.com/in/yamcham0-bab408220/" target="_blank"><LinkedInIcon/></Link>
       </CardActions>
     </Card>
-    <Card id="Cards" sx={{ maxWidth: 345, margin: 1/*, display: grid, gridRow: "1/3", gridColumn: "1/3"*/ }} style={{ background: '#C7BCB9', border: 'solid' }}>
+    <Card id="Cards" sx={{ maxWidth: 150, maxHeight: 300, margin: 1/*, display: grid, gridRow: "1/3", gridColumn: "1/3"*/ }} style={{ background: '#C7BCB9', border: 'solid' }}>
       <CardMedia
         component="img"
         height="250"
@@ -93,7 +93,7 @@ export default function Contact () {
         <Link href="https://www.linkedin.com/in/christopher-kennard-13a479213/" target="_blank"><LinkedInIcon/></Link>
       </CardActions>
     </Card>
-    <Card id="Cards" sx={{ maxWidth: 345, margin: 1 /*, display: grid, gridRow: "1/3", gridColumn: "1/3",*/}} style={{ background: '#C7BCB9', border: 'solid' }}>
+    <Card id="Cards" sx={{ maxWidth: 150, maxHeight: 300, margin: 1 /*, display: grid, gridRow: "1/3", gridColumn: "1/3",*/}} style={{ background: '#C7BCB9', border: 'solid' }}>
       
       <CardMedia
         component="img"
@@ -115,7 +115,7 @@ export default function Contact () {
         <Link href="https://www.linkedin.com/in/keshav-krishnan-ba5a40145/" target="_blank"><LinkedInIcon/></Link>
       </CardActions>
     </Card>
-    <Card id="Cards" sx={{ maxWidth: 345, margin: 1 /*, display: grid, gridRow: "1/3", gridColumn: "1/3",*/}} style={{ background: '#C7BCB9', border: 'solid' }}>
+    <Card id="Cards" sx={{ maxWidth: 150, maxHeight: 300, margin: 1 /*, display: grid, gridRow: "1/3", gridColumn: "1/3",*/}} style={{ background: '#C7BCB9', border: 'solid' }}>
       
       <CardMedia
         component="img"
@@ -129,7 +129,7 @@ export default function Contact () {
           Stephanie
         </Typography>
         <Typography variant="body2" color="text.secondary">
-         Full-Stack Web Developer absolute beast at all things Front End and still growing on the Back End!
+         Full-Stack Web Developer absolute beast at all things Front End!
         </Typography>
       </CardContent>
       <CardActions>

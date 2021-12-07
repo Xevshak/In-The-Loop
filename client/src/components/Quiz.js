@@ -24,17 +24,17 @@ export default function Quiz() {
     if (value === 'best') {
       setHelperText('You got it!');
       setError(false);
-    } else if (value === 'worst') {
-      setHelperText('Sorry, wrong answer!');
+    } else if (value === 'best2') {
+      setHelperText('You got it!');
       setError(true);
-    } else if (value === 'worst1') {
-      setHelperText('Sorry, wrong answer!');
+    } else if (value === 'best3') {
+      setHelperText('You got it!');
       setError(true);
-    } else if (value === 'worst2') {
-      setHelperText('Sorry, wrong answer!');
+    } else if (value === 'best4') {
+      setHelperText('You got it!');
       setError(true);
     } else {
-      setHelperText('Please select an option.');
+      setHelperText('Sorry, you chose poorly');
       setError(true);
     }
   };
@@ -65,9 +65,60 @@ export default function Quiz() {
         </Button>
       </FormControl>
 
+
+      <FormControl
+        sx={{ m: 3 }}
+        component="fieldset"
+        error={error}
+        variant="standard"
+      >
+        <FormLabel component="legend">Which one of the following is a functional for loop?</FormLabel>
+        <RadioGroup
+          aria-label="quiz2"
+          name="quiz2"
+          value={value}
+          onChange={handleRadioChange}
+        >
+          <FormControlLabel value="best2" control={<Radio />} label="for (let i = 0; i < arr.length; i++)" />
+          <FormControlLabel value="worst-" control={<Radio />} label="for (let 0 = i; i < arr.length; i++)" />
+          <FormControlLabel value="worst-1" control={<Radio />} label="for (i = 0; i < arr.length; i++)" />
+          <FormControlLabel value="worst-2" control={<Radio />} label="for (let 0 = 1; i < arr.length; i-+)" />
+        </RadioGroup>
+        <FormHelperText>{helperText}</FormHelperText>
+        <Button sx={{ mt: 1, mr: 1 }} type="submit" variant="outlined">
+          Check Answer
+        </Button>
+      </FormControl>
+
+
+      <FormControl
+        sx={{ m: 3 }}
+        component="fieldset"
+        error={error}
+        variant="standard"
+      >
+        <FormLabel component="legend">Which one of the following is a functional for loop?</FormLabel>
+        <RadioGroup
+          aria-label="quiz3"
+          name="quiz3"
+          value={value}
+          onChange={handleRadioChange}
+        >
+          <FormControlLabel value="best3" control={<Radio />} label="for (let i = 0; i < arr.length; i++)" />
+          <FormControlLabel value="worst--" control={<Radio />} label="for (let 0 = i; i < arr.length; i++)" />
+          <FormControlLabel value="worst--1" control={<Radio />} label="for (i = 0; i < arr.length; i++)" />
+          <FormControlLabel value="worst--2" control={<Radio />} label="for (let 0 = 1; i < arr.length; i-+)" />
+        </RadioGroup>
+        <FormHelperText>{helperText}</FormHelperText>
+        <Button sx={{ mt: 1, mr: 1 }} type="submit" variant="outlined">
+          Check Answer
+        </Button>
+      </FormControl>
+
       
     </form>
   );
+  
 }
 
 

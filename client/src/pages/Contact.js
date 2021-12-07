@@ -27,6 +27,7 @@ export default function Contact () {
     return(
         <div>
             <Navbar/>
+            <div id="header">This WorkBook was brought to you by these amazing Full Stack Developers!</div>
             <Box id="flexRow"sx={{m: 1}}>
               <Grid>
 <Card id="Cards" sx={{ maxWidth: 150, maxHeight: 300, margin: 1/*, display:grid, gridRow: "1/3", gridColumn: "1/3"*/ }} style={{ background: '#C7BCB9', border: 'solid'}}>

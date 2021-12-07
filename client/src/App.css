@@ -1,5 +1,7 @@
 body {
-  background-image: url('./images/background.jpg');
+  background-image: url('./images/backgroundimg.jpg');
+  max-height: fit-content;
+  max-width: fit-content;
   height: 100%;
   width: 50%;
 }

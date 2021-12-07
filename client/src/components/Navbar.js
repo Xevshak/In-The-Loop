@@ -38,7 +38,7 @@ export default function Navbar () {
         }}
       >
 
-        <MenuItem  onClick={handleClose}><Link to={`/dashboard`}>Dashboard</Link></MenuItem>
+        {/* <MenuItem  onClick={handleClose}><Link to={`/dashboard`}>Dashboard</Link></MenuItem> */}
         <MenuItem  onClick={handleClose}><Link to={`/js`}>JavaScript</Link></MenuItem>
         <MenuItem onClick={handleClose}>CSS</MenuItem>
         <MenuItem onClick={handleClose}>HTML</MenuItem>

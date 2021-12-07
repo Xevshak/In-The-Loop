@@ -3,6 +3,17 @@
   flex-direction: column;
 }
 
+#header {
+  position: relative;
+  color: #04D939;
+  max-width: fit-content;
+  text-shadow: 1px 1px 2px #023E73, 0 0 .5em #04BFAD, 0 0 1em #62A1D9;
+  font-family: Minecraft Evenings;
+  width: 800px;
+  font-size: 50px;
+
+}
+
 #Cards {
   color: #04D939;
   text-shadow: 1px 1px 2px #023E73, 0 0 1em #026873, 0 0 0.2em #62A1D9;

@@ -27,7 +27,7 @@ export default function Contact () {
     return(
         <div>
             <Navbar/>
-            <Box sx={{m: 1}}>
+            <Box id="flexRow"sx={{m: 1}}>
               <Grid>
 <Card id="Cards" sx={{ maxWidth: 150, maxHeight: 300, margin: 1/*, display:grid, gridRow: "1/3", gridColumn: "1/3"*/ }} style={{ background: '#C7BCB9', border: 'solid'}}>
       <CardMedia

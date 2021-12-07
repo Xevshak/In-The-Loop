@@ -1,3 +1,8 @@
+#flexRow {
+  display: flex;
+  flex-direction: column;
+}
+
 #Cards {
   color: #04D939;
   text-shadow: 1px 1px 2px #023E73, 0 0 1em #026873, 0 0 0.2em #62A1D9;
@@ -5,9 +10,8 @@
   left: 50%;
   right: 50%;
   justify-content: center;
-  flex-direction: row;
   box-shadow: 10px 10px 10px #04BFAD;
-  /* display: ; */
+
 
 }
 
@@ -15,5 +19,7 @@
   max-width: none;
   max-height: none;
   justify-content: center;
+  box-shadow: 10px 10px 10px brown;
+  color: brown;
 
 }

@@ -19,6 +19,8 @@ function Login(props) {
         variables: { ...formState },
       });
       const token = mutationResponse.data.login.token;
+      const name = mutationResponse.data.login.user.username;
+      localStorage.setItem("username", `${name}`);
       console.log(mutationResponse);
       console.log(token);
       Auth.login(token);
@@ -87,5 +89,5 @@ function Login(props) {
     </main>
   );
 };
-
+const displayName = localStorage.getItem("username");
 export default Login;

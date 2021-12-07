@@ -1,13 +1,13 @@
-const db = require('../config/connections');
-const { Question } = require('../models');
+const db = require('../config/connection');
+const { User } = require('../models');
 
-const questionData = require('./questionData.json');
-// Working on db await function 
+const userData = require('./userData.json');
+
 db.once('open', async () => {
-    // await Question.deleteMany({});
+    await User.create({});
 
-    const questions = await Question.insertMany(questionData);
+    const questions = await User.insertMany(userData);
 
-    console.log('Questions seeded');
+    console.log('Users seeded');
     process.exit(0);
 });

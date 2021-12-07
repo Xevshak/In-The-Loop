@@ -1,15 +1,11 @@
 import React from 'react'
-import {Link} from 'react-router-dom';
-import Login from './Login.js';
-import Signup from './Signup.js';
-
-
-
+import { Link } from 'react-router-dom'
 export default function Home () {
     return(
         <div>
-            <Link to='/login'>I could be a button</Link>
-            <Signup/>
+            
+            <button type='submit'> <Link to={`/login`}>Login</Link></button>
+            <button type='submit'><Link to={`/signup`}>Sign Up</Link></button>
         </div>
     )
 }

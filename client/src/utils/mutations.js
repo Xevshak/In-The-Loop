@@ -1,8 +1,8 @@
 import { gql } from '@apollo/client';
 
 export const ADD_USER = gql`
-  mutation createUser($user: String!, $email: String!, $password: String!) {
-    createUser(user: $user, email: $email, password: $password) {
+  mutation addUser($username: String!, $email: String!, $password: String!) {
+    addUser(username: $username, email: $email, password: $password) {
       token
       user {
         _id 
@@ -51,7 +51,3 @@ export const PROGRESS = gql`
 
 
 
-// "title": "Is this a loop?",
-//       "question": "Pick your code and solve this",
-//       "answer": "A",
-//       "choices": ["A", "B", "C", "D"]

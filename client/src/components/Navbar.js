@@ -15,7 +15,11 @@ export default function Navbar () {
   const handleClose = () => {
     setAnchorEl(null);
   };
+  // document.getElementById("signout").addEventListener("click", function(){ localStorage.removeItem("username"); });
+  
+
     return(
+      
         <div>
       <Button
         id="basic-button"
@@ -42,7 +46,7 @@ export default function Navbar () {
         <MenuItem  onClick={handleClose}><Link to={`/js`}>JavaScript</Link></MenuItem>
         <MenuItem onClick={handleClose}>CSS</MenuItem>
         <MenuItem onClick={handleClose}>HTML</MenuItem>
-        <MenuItem  onClick={handleClose}><Link to={`/`}>Sign Out</Link></MenuItem>
+        <MenuItem onClick={handleClose}><Link to={`/`} id="signout" >Sign Out</Link></MenuItem>
       </Menu>
     </div>
     )

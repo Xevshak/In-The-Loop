@@ -6,6 +6,8 @@ import { ADD_USER } from '../utils/mutations';
 
 import Auth from '../utils/auth';
 
+const displayName = localStorage.getItem("username");
+
 function Signup(props) {
   const [formState, setFormState] = useState({
     username: '',
@@ -36,6 +38,7 @@ function Signup(props) {
       console.log(formState);
 
       Auth.login(data.addUser.token);
+      localStorage.setItem("username", `${formState.username}`);
     } catch (e) {
       console.error(e);
     }

@@ -1,7 +1,9 @@
 import React, {useState} from 'react'
 import Navbar from '../components/Navbar'
 import Forloop from '../components/Forloop'
-import Quiz from '../components/Quiz';
+import Quiz1 from '../components/Quiz1';
+import Quiz2 from '../components/Quiz2'
+import Quiz3 from '../components/Quiz3'
 import '../Style/JavaScript.css'
 
 export default function JavaScript () {
@@ -38,7 +40,9 @@ export default function JavaScript () {
 }`}</span>
                 </code>
             </pre>
-            <Quiz/>
+            <Quiz1/>
+            <Quiz2/>
+            <Quiz3/>
 
         </div>
     )

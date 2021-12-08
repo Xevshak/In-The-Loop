@@ -21,7 +21,7 @@ export default function Home () {
             <Box>
                 <Button variant="contained" className='loginBtn' style={{  backgroundImage: `url(${Btnimg})`, boxShadow: 'inset 2px 2px 1px #e0e0e0', border: '2px solid black', borderRadius: 0, cursor: 'pointer', paddingTop:'3px' }} sx={{margin: 1}}><Link to={`/login`} style={{textDecoration: 'none', color: 'white', fontFamily: 'SilkscreenNormal'}}>Login</Link></Button>
 
-                <Button variant="contained" className='loginBtn' style={{ backgroundImage: `url(${Btnimg})`, boxShadow: 'inset 2px 2px 1px ', border: '2px solid black', borderRadius: 0, cursor: 'pointer', paddingTop:'3px' }} sx={{margin: 1}}><Link to={`/login`} style={{textDecoration: 'none', color: 'white', fontFamily: 'SilkscreenNormal'}}>Sign Up</Link></Button>
+                <Button variant="contained" className='loginBtn' style={{ backgroundImage: `url(${Btnimg})`, boxShadow: 'inset 2px 2px 1px ', border: '2px solid black', borderRadius: 0, cursor: 'pointer', paddingTop:'3px' }} sx={{margin: 1}}><Link to={`/signup`} style={{textDecoration: 'none', color: 'white', fontFamily: 'SilkscreenNormal'}}>Sign Up</Link></Button>
             </Box>
 
             <Card sx={{margin:1}} style={{backgroundColor: 'darkgreen'}}>

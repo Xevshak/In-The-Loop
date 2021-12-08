@@ -20,12 +20,15 @@ import  Stephimg from '../images/Stephimg.jpg'
 
 import Navbar from '../components/Navbar'
 
+const displayName = localStorage.getItem("username");
+
 export default function Contact () {
 
 
 
     return(
         <div id="backgroundImg">
+          <h1 id='username'>{displayName} is In the Loop!</h1>
             <Navbar/>
             <div id="header">This WorkBook was brought to you by these amazing Full Stack Developers!</div>
             <Box id="flexRow"sx={{m: 1}}>

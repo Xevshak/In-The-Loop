@@ -14,7 +14,7 @@ const userSchema = new Schema(
             type:String,
             required:true,
             unique:true,
-            match:[/.+@+\..+/, 'Please use a valid human email address that is actually real, thank you!']
+            match:[/.+@.+\..+/, 'Please use a valid human email address that is actually real, thank you!']
         },
         password:{
             type:String,

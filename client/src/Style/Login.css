@@ -2,7 +2,7 @@
   position: relative;
   left: 12%;
   align-items: center;
-  height: 300px;
+  height: 225px;
   width: 300px;
   border: grey;
   background-color: rgb(58, 54, 54);
@@ -15,6 +15,7 @@
   margin: 5px;
 }
 
+
 #passwordPosition {
   position: relative;
   left: 20%;
@@ -26,6 +27,7 @@
   position: relative;
   text-align: center;
   font-weight: bolder;
+  margin: 0%;
 }
 
 #goBackBtn {
@@ -38,7 +40,7 @@
 #goBackBtn:hover {
   position: relative;
   left: 33%;
-  color: aqua;
+  color: #04D939;
 
 
 }
@@ -46,6 +48,15 @@
 #LogInBtn {
   position: relative;
   left: 33%;
+
+
+}
+
+#LogInBtn:hover {
+  position: relative;
+  left: 33%;
+  color: #04D939;
+
 
 
 }

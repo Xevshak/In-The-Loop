@@ -89,5 +89,5 @@ function Login(props) {
     </main>
   );
 };
-const displayName = localStorage.getItem("username");
+// const displayName = localStorage.getItem("username");
 export default Login;

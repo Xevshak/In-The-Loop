@@ -1,7 +1,9 @@
 body {
-  /* background-image: url('./images/backgroundimg.jpg');
-  background-size: cover;
-  height: 100%;
-  width: 50%; */
+  background-image: url('./images/backgroundimg3.PNG');
   background-color: #02f8e0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 110vh;
+  width: 100vw;
+
 }

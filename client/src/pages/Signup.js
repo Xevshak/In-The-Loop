@@ -45,17 +45,7 @@ function Signup(props) {
   };
 
   return (
-    <main className="flex-row justify-center mb-4">
-      <div className="col-12 col-lg-10">
-        <div className="card">
-          <h4 className="card-header bg-dark text-light p-2">Sign Up</h4>
-          <div className="card-body">
-              {data ?(
-              <p>
-                Success! You may now head{' '}
-                
-              </p>
-            ) : (
+    
               <form onSubmit={handleFormSubmit}>
                 <input
                   className="form-input"
@@ -89,18 +79,8 @@ function Signup(props) {
                   {/* <Link to={`/dashboard`}>Submit</Link>  */}
                 </button>
               </form>
-            )};
-
-            {error && (
-              <div className="my-3 p-3 bg-danger text-white">
-                {error.message}
-              </div>
-            )}
-          </div>
-        </div>
-      </div>
-    </main>
-  );
+           
+  )
 };
 
 export default Signup;

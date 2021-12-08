@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import { LOGIN_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
 
+const displayName = localStorage.getItem("username");
+
 function Login(props) {
   const [formState, setFormState] = useState({ email: '', password: '' });
   const [login, { error }] = useMutation(LOGIN_USER);
@@ -19,8 +21,7 @@ function Login(props) {
         variables: { ...formState },
       });
       const token = mutationResponse.data.login.token;
-      const name = mutationResponse.data.login.user.username;
-      localStorage.setItem("username", `${name}`);
+      localStorage.setItem("username", `${mutationResponse.data.login.user.username}`);
       console.log(mutationResponse);
       console.log(token);
       Auth.login(token);
@@ -39,17 +40,8 @@ function Login(props) {
   };
 
   return (
-    <main className="flex-row justify-center mb-4">
-      <div className="col-12 col-lg-10">
-        <div className="card">
-          <h4 className="card-header bg-dark text-light p-2">Login</h4>
-          <div className="card-body">
-             (
-              <p>
-                Success! You may now head{' '}
-                <Link to="/login">back to the homepage.</Link>
-              </p>
-            ) : (
+   
+            
               <form onSubmit={handleFormSubmit}>
                 <input
                   className="form-input"
@@ -71,23 +63,15 @@ function Login(props) {
                   className="btn btn-block btn-info"
                   style={{ cursor: 'pointer' }}
                   type="submit"
-                >
+                > Submit
                   {/* the button can't link to dashboard or it executes without a login */}
                  {/* <Link to={`/dashboard`}>Submit</Link> */}
                 </button>
               </form>
-            )
+            
 
-            {error && (
-              <div className="my-3 p-3 bg-danger text-white">
-                {error.message}
-              </div>
-            )}
-          </div>
-        </div>
-      </div>
-    </main>
-  );
+            
+  )
 };
-// const displayName = localStorage.getItem("username");
+
 export default Login;

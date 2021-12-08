@@ -1,5 +1,6 @@
 #title {
   max-width: fit-content;
+  display: flex;
   background-color: none;
   font-size: 60px;
   font-family: 'Minecraft Evenings';
@@ -10,6 +11,26 @@
   border: 4mm ridge #04D939;
   position: relative;
   text-align: center;
+  align-items: center;
   justify-content: center;
   left: 1rem;
+  transform: scale(1);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(17, 239, 246, 0);
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
 }

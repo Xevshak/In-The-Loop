@@ -63,7 +63,7 @@ export default function Contact () {
         image={Chamoimg}
         alt="Image of Chamo"
       />
-      <CardContent>
+        <CardContent style={{backgroundColor:"#023E73"}}>
         <Typography gutterBottom variant="h5" component="div">
           Chamo
         </Typography>
@@ -71,7 +71,7 @@ export default function Contact () {
          Full Stack Developer who loves to code in the name of Science!
         </Typography>
       </CardContent>
-      <CardActions>
+      <CardActions style={{backgroundColor:"#04D939"}}>
         <Link href="https://github.com/YamCham0" target="_blank"><GitHubIcon/></Link>
         <Link href="https://www.linkedin.com/in/yamcham0-bab408220/" target="_blank"><LinkedInIcon/></Link>
       </CardActions>
@@ -84,7 +84,7 @@ export default function Contact () {
         image={Chrisimg}
         alt="image of Christopher"
       />
-      <CardContent>
+         <CardContent style={{backgroundColor:"#023E73"}}>
         <Typography gutterBottom variant="h5" component="div">
           Christopher
         </Typography>
@@ -92,7 +92,7 @@ export default function Contact () {
          Full-Stack Web Developer with a passion for front end design and strong attention to detail! 
         </Typography>
       </CardContent>
-      <CardActions>
+      <CardActions style={{backgroundColor:"#04D939"}}>
         <Link href="https://github.com/chris79kennard" target="_blank"><GitHubIcon/></Link>
         <Link href="https://www.linkedin.com/in/christopher-kennard-13a479213/" target="_blank"><LinkedInIcon/></Link>
       </CardActions>
@@ -106,7 +106,7 @@ export default function Contact () {
         image={Keshavimg}
         alt="Image of Keshav standing under a Cherry Blossom Tree"
       />
-      <CardContent>
+        <CardContent style={{backgroundColor:"#023E73"}}>
         <Typography gutterBottom variant="h5" component="div">
           Keshav
         </Typography>
@@ -114,7 +114,7 @@ export default function Contact () {
          Full-Stack Web Developer with Great Hair! 
         </Typography>
       </CardContent>
-      <CardActions>
+      <CardActions style={{backgroundColor:"#04D939"}}>
         <Link href="https://github.com/Xevshak" target="_blank"><GitHubIcon/></Link>
         <Link href="https://www.linkedin.com/in/keshav-krishnan-ba5a40145/" target="_blank"><LinkedInIcon/></Link>
       </CardActions>
@@ -128,7 +128,7 @@ export default function Contact () {
         image={Stephimg}
         alt="Image of Stephanie"
       />
-      <CardContent>
+         <CardContent style={{backgroundColor:"#023E73"}}>
         <Typography gutterBottom variant="h5" component="div">
           Stephanie
         </Typography>
@@ -136,7 +136,7 @@ export default function Contact () {
          Full-Stack Web Developer absolute beast at all things Front End!
         </Typography>
       </CardContent>
-      <CardActions>
+      <CardActions style={{backgroundColor:"#04D939"}}>
         <Link href="https://github.com/CortezStephanie" target="_blank"><GitHubIcon/></Link>
         <Link href="https://www.linkedin.com/in/stephanie-cortez-660b9821b/" target="_blank"><LinkedInIcon/></Link>
       </CardActions>

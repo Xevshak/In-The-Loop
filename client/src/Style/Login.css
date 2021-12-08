@@ -1,1 +1,51 @@
-/*helloworld*/
+#loginForm {
+  position: relative;
+  left: 12%;
+  align-items: center;
+  height: 300px;
+  width: 300px;
+  border: grey;
+  background-color: rgb(58, 54, 54);
+
+}
+
+#emailPosition {
+  position: relative;
+  left: 20%;
+  margin: 5px;
+}
+
+#passwordPosition {
+  position: relative;
+  left: 20%;
+  margin: 5px;
+}
+
+#passwordTxt {
+  color: white;
+  position: relative;
+  text-align: center;
+  font-weight: bolder;
+}
+
+#goBackBtn {
+  position: relative;
+  left: 33%;
+  color: white;
+
+}
+
+#goBackBtn:hover {
+  position: relative;
+  left: 33%;
+  color: aqua;
+
+
+}
+
+#LogInBtn {
+  position: relative;
+  left: 33%;
+
+
+}

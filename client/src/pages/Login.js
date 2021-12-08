@@ -4,6 +4,11 @@ import { Link } from 'react-router-dom';
 import { LOGIN_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
 
+<<<<<<< HEAD
+=======
+const displayName = localStorage.getItem("username");
+
+>>>>>>> cee4c48934fb1109ac29eca7f3050e7643cb46ef
 function Login(props) {
   const [formState, setFormState] = useState({ email: '', password: '' });
   const [login, { error }] = useMutation(LOGIN_USER);
@@ -19,9 +24,17 @@ function Login(props) {
         variables: { ...formState },
       });
       const token = mutationResponse.data.login.token;
+<<<<<<< HEAD
       console.log(mutationResponse);
       console.log(token);
       Auth.login(token);
+=======
+      localStorage.setItem("username", `${mutationResponse.data.login.user.username}`);
+      console.log(mutationResponse);
+      console.log(token);
+      Auth.login(token);
+      
+>>>>>>> cee4c48934fb1109ac29eca7f3050e7643cb46ef
 
     } catch (e) {
       console.log(e);
@@ -35,20 +48,8 @@ function Login(props) {
       [name]: value,
     });
   };
-
   return (
-    <main className="flex-row justify-center mb-4">
-      <div className="col-12 col-lg-10">
-        <div className="card">
-          <h4 className="card-header bg-dark text-light p-2">Login</h4>
-          <div className="card-body">
-             (
-              <p>
-                Success! You may now head{' '}
-                <Link to="/login">back to the homepage.</Link>
-              </p>
-            ) : (
-              <form onSubmit={handleFormSubmit}>
+    <form onSubmit={handleFormSubmit}>
                 <input
                   className="form-input"
                   placeholder="Your email"
@@ -69,11 +70,16 @@ function Login(props) {
                   className="btn btn-block btn-info"
                   style={{ cursor: 'pointer' }}
                   type="submit"
+<<<<<<< HEAD
                 >
+=======
+                > Submit
+>>>>>>> cee4c48934fb1109ac29eca7f3050e7643cb46ef
                   {/* the button can't link to dashboard or it executes without a login */}
                  {/* <Link to={`/dashboard`}>Submit</Link> */}
                 </button>
               </form>
+<<<<<<< HEAD
             )
 
             {error && (
@@ -87,5 +93,8 @@ function Login(props) {
     </main>
   );
 };
+=======
+  )};
+>>>>>>> cee4c48934fb1109ac29eca7f3050e7643cb46ef
 
 export default Login;

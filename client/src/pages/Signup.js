@@ -6,6 +6,11 @@ import { ADD_USER } from '../utils/mutations';
 
 import Auth from '../utils/auth';
 
+<<<<<<< HEAD
+=======
+const displayName = localStorage.getItem("username");
+
+>>>>>>> cee4c48934fb1109ac29eca7f3050e7643cb46ef
 function Signup(props) {
   const [formState, setFormState] = useState({
     username: '',
@@ -36,12 +41,14 @@ function Signup(props) {
       console.log(formState);
 
       Auth.login(data.addUser.token);
+      localStorage.setItem("username", `${formState.username}`);
     } catch (e) {
       console.error(e);
     }
   };
 
   return (
+<<<<<<< HEAD
     <main className="flex-row justify-center mb-4">
       <div className="col-12 col-lg-10">
         <div className="card">
@@ -53,6 +60,9 @@ function Signup(props) {
                 
               </p>
             ) : (
+=======
+    
+>>>>>>> cee4c48934fb1109ac29eca7f3050e7643cb46ef
               <form onSubmit={handleFormSubmit}>
                 <input
                   className="form-input"
@@ -82,22 +92,12 @@ function Signup(props) {
                   className="btn btn-block btn-info"
                   style={{ cursor: 'pointer' }}
                   type="submit"
-                >
+                >Submit
                   {/* <Link to={`/dashboard`}>Submit</Link>  */}
                 </button>
               </form>
-            )};
-
-            {error && (
-              <div className="my-3 p-3 bg-danger text-white">
-                {error.message}
-              </div>
-            )}
-          </div>
-        </div>
-      </div>
-    </main>
-  );
+            
+  )
 };
 
 export default Signup;

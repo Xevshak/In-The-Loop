@@ -13,8 +13,8 @@ import './App.css';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import JavaScript from './pages/JavaScript';
-import Dashboard from './pages/Dashboard';
-
+// import Dashboard from './pages/Dashboard';
+import Contact from './pages/Contact'
 import Footer from './components/Footer';
 import Header from './components/Header';
 
@@ -53,7 +53,8 @@ function App() {
           {/* <Route exact path="/login"><Login/></Route> */}
           <Route exact path="/signup"><Signup/></Route>
           <Route exact path="/js"><JavaScript/></Route>
-          <Route exact path="/dashboard"><Dashboard/></Route>
+          {/* <Route exact path="/dashboard"><Dashboard/></Route> */}
+          <Route exact path="/contacts"><Contact/></Route>
         </div>
       <Footer/>  
     </Router>

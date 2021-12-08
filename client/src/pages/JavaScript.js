@@ -1,7 +1,13 @@
 import React, {useState} from 'react'
 import Navbar from '../components/Navbar'
 import Forloop from '../components/Forloop'
-import Quiz from '../components/Quiz';
+import Quiz1 from '../components/Quiz1';
+import Quiz2 from '../components/Quiz2'
+import Quiz3 from '../components/Quiz3'
+import '../Style/JavaScript.css'
+
+const displayName = localStorage.getItem("username");
+
 export default function JavaScript () {
     const [value, setValue] = useState('');
 
@@ -10,6 +16,7 @@ export default function JavaScript () {
     }
     return(
         <div>
+            <h1 id='username'>{displayName} is In the Loop!</h1>
             <Navbar/>
             <div id="creepBox"><Forloop creep={value}/></div>
                 <pre className='card'>
@@ -36,7 +43,9 @@ export default function JavaScript () {
 }`}</span>
                 </code>
             </pre>
-            <Quiz/>
+            <Quiz1/>
+            <Quiz2/>
+            <Quiz3/>
 
         </div>
     )

@@ -1,6 +1,8 @@
 import React, {useState} from 'react'
 import Navbar from '../components/Navbar'
 import Forloop from '../components/Forloop'
+import Quiz from '../components/Quiz';
+import '../Style/JavaScript.css'
 
 export default function JavaScript () {
     const [value, setValue] = useState('');
@@ -36,6 +38,7 @@ export default function JavaScript () {
 }`}</span>
                 </code>
             </pre>
+            <Quiz/>
 
         </div>
     )

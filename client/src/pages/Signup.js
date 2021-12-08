@@ -4,13 +4,12 @@ import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
 
+
+import swal from 'sweetalert';
 import Auth from '../utils/auth';
 
-<<<<<<< HEAD
-=======
 const displayName = localStorage.getItem("username");
 
->>>>>>> cee4c48934fb1109ac29eca7f3050e7643cb46ef
 function Signup(props) {
   const [formState, setFormState] = useState({
     username: '',
@@ -32,7 +31,11 @@ function Signup(props) {
   // submit form
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-    console.log(formState);
+    // let myGreeting = setTimeout(() => {
+    //   alert('Hello, Mr. Universe!');
+    // }, 2000);
+    // console.log(myGreeting);
+    
 
     try {
       const { data } = await addUser({
@@ -44,25 +47,12 @@ function Signup(props) {
       localStorage.setItem("username", `${formState.username}`);
     } catch (e) {
       console.error(e);
+      swal("Oops! Something went wrong are sure you are not already a member?");
     }
   };
 
   return (
-<<<<<<< HEAD
-    <main className="flex-row justify-center mb-4">
-      <div className="col-12 col-lg-10">
-        <div className="card">
-          <h4 className="card-header bg-dark text-light p-2">Sign Up</h4>
-          <div className="card-body">
-              {data ?(
-              <p>
-                Success! You may now head{' '}
-                
-              </p>
-            ) : (
-=======
     
->>>>>>> cee4c48934fb1109ac29eca7f3050e7643cb46ef
               <form onSubmit={handleFormSubmit}>
                 <input
                   className="form-input"
@@ -89,11 +79,11 @@ function Signup(props) {
                   onChange={handleChange}
                 />
                 <button
-                  className="btn btn-block btn-info"
+                id="submitSig"  className="btn btn-block btn-info"
                   style={{ cursor: 'pointer' }}
                   type="submit"
                 >Submit
-                  {/* <Link to={`/dashboard`}>Submit</Link>  */}
+                  {/* <Link to={`/js`}>Submit</Link>  */}
                 </button>
               </form>
             

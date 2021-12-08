@@ -1,6 +1,8 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 
+import Auth from '../utils/auth';
+
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
@@ -43,7 +45,8 @@ export default function Navbar () {
         <MenuItem onClick={handleClose}>CSS</MenuItem>
         <MenuItem onClick={handleClose}>HTML</MenuItem>
         <MenuItem  onClick={handleClose}><Link to={`/contacts`}>Contact Us</Link></MenuItem>
-        <MenuItem  onClick={handleClose}><Link to={`/`}>Sign Out</Link></MenuItem>
+        <MenuItem  onClick={Auth.logout}><Link to={`/`}>Sign Out</Link></MenuItem>
+        {/* need to link to logout function */}
       </Menu>
     </div>
     )

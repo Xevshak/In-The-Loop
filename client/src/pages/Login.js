@@ -3,12 +3,12 @@ import { useMutation } from '@apollo/client';
 import { Link } from 'react-router-dom';
 import { LOGIN_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
+import swal from 'sweetalert';
 
-<<<<<<< HEAD
-=======
+
+
 const displayName = localStorage.getItem("username");
 
->>>>>>> cee4c48934fb1109ac29eca7f3050e7643cb46ef
 function Login(props) {
   const [formState, setFormState] = useState({ email: '', password: '' });
   const [login, { error }] = useMutation(LOGIN_USER);
@@ -24,20 +24,15 @@ function Login(props) {
         variables: { ...formState },
       });
       const token = mutationResponse.data.login.token;
-<<<<<<< HEAD
-      console.log(mutationResponse);
-      console.log(token);
-      Auth.login(token);
-=======
       localStorage.setItem("username", `${mutationResponse.data.login.user.username}`);
       console.log(mutationResponse);
       console.log(token);
       Auth.login(token);
       
->>>>>>> cee4c48934fb1109ac29eca7f3050e7643cb46ef
 
     } catch (e) {
       console.log(e);
+      swal("Login failed pleae check your Email or Password.");
     }
   };
 
@@ -70,31 +65,11 @@ function Login(props) {
                   className="btn btn-block btn-info"
                   style={{ cursor: 'pointer' }}
                   type="submit"
-<<<<<<< HEAD
-                >
-=======
                 > Submit
->>>>>>> cee4c48934fb1109ac29eca7f3050e7643cb46ef
                   {/* the button can't link to dashboard or it executes without a login */}
-                 {/* <Link to={`/dashboard`}>Submit</Link> */}
+                
                 </button>
               </form>
-<<<<<<< HEAD
-            )
-
-            {error && (
-              <div className="my-3 p-3 bg-danger text-white">
-                {error.message}
-              </div>
-            )}
-          </div>
-        </div>
-      </div>
-    </main>
-  );
-};
-=======
   )};
->>>>>>> cee4c48934fb1109ac29eca7f3050e7643cb46ef
 
 export default Login;

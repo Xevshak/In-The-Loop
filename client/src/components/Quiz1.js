@@ -6,7 +6,7 @@ import FormControl from '@mui/material/FormControl';
 import FormHelperText from '@mui/material/FormHelperText';
 import FormLabel from '@mui/material/FormLabel';
 import Button from '@mui/material/Button';
-
+import "../Style/Quiz.css"
 export default function Quiz() {
   const [value, setValue] = React.useState('');
   const [error, setError] = React.useState(false);
@@ -24,17 +24,14 @@ export default function Quiz() {
     if (value === 'best') {
       setHelperText('You got it!');
       setError(false);
-    } else if (value === 'best2') {
-      setHelperText('You got it!');
+    } else if (value === 'worst2') {
+      setHelperText('Sorry, wrong answer!');
       setError(true);
-    } else if (value === 'best3') {
-      setHelperText('You got it!');
-      setError(true);
-    } else if (value === 'best4') {
-      setHelperText('You got it!');
-      setError(true);
-    } else {
-      setHelperText('Sorry, you chose poorly');
+    } else if (value === 'worst3') {
+      setHelperText('Sorry, wrong answer!');
+      setError(true);}
+      else {
+      setHelperText('Please select an option.');
       setError(true);
     }
   };
@@ -124,10 +121,9 @@ export default function Quiz() {
           value={value}
           onChange={handleRadioChange}
         >
-          <FormControlLabel value="worst2" control={<Radio />} label="i < 4" />
-          <FormControlLabel value="best" control={<Radio />} label="i < 5" />
-          <FormControlLabel value="worst" control={<Radio />} label="i < 1" />
-          <FormControlLabel value="worst1" control={<Radio />} label="i < 3" />
+          <FormControlLabel value="best" control={<Radio />} label="Keshav has great hair" />
+          <FormControlLabel value="worst2" control={<Radio />} label="The worst." />
+          <FormControlLabel value="worst3" control={<Radio />} label="Keshav has great hair" />
         </RadioGroup>
 
  */}

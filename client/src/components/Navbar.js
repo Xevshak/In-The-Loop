@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-
+import "../Style/Navbar.css"
 export default function Navbar () {
     const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -42,11 +42,12 @@ export default function Navbar () {
         }}
       >
 
-        <MenuItem  onClick={handleClose}><Link to={`/dashboard`}>Dashboard</Link></MenuItem>
+        {/* <MenuItem  onClick={handleClose}><Link to={`/dashboard`}>Dashboard</Link></MenuItem> */}
         <MenuItem  onClick={handleClose}><Link to={`/js`}>JavaScript</Link></MenuItem>
         <MenuItem onClick={handleClose}>CSS</MenuItem>
         <MenuItem onClick={handleClose}>HTML</MenuItem>
-        <MenuItem onClick={handleClose}><Link to={`/`} id="signout" >Sign Out</Link></MenuItem>
+        <MenuItem  onClick={handleClose}><Link to={`/contacts`}>Contact Us</Link></MenuItem>
+        <MenuItem  onClick={handleClose}><Link to={`/`}>Sign Out</Link></MenuItem>
       </Menu>
     </div>
     )

@@ -25,6 +25,7 @@ function Login(props) {
       console.log(mutationResponse);
       console.log(token);
       Auth.login(token);
+      
 
     } catch (e) {
       console.log(e);
@@ -38,11 +39,8 @@ function Login(props) {
       [name]: value,
     });
   };
-
   return (
-   
-            
-              <form onSubmit={handleFormSubmit}>
+    <form onSubmit={handleFormSubmit}>
                 <input
                   className="form-input"
                   placeholder="Your email"
@@ -68,10 +66,6 @@ function Login(props) {
                  {/* <Link to={`/dashboard`}>Submit</Link> */}
                 </button>
               </form>
-            
-
-            
-  )
-};
+  )};
 
 export default Login;

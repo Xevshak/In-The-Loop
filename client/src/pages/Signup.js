@@ -75,11 +75,11 @@ function Signup(props) {
                   className="btn btn-block btn-info"
                   style={{ cursor: 'pointer' }}
                   type="submit"
-                >
+                >Submit
                   {/* <Link to={`/dashboard`}>Submit</Link>  */}
                 </button>
               </form>
-           
+            
   )
 };
 

@@ -1,1 +1,17 @@
-/*helloworld*/
+.card {
+    color: white;
+    border: 2px single grey;
+    background-color: grey;
+    margin: 20px 5px 5px 5px;
+    height: 20vh;
+    width: 95vw;
+}
+
+#creepBox {
+    box-shadow: inset 0px 0px 5px 2px grey;
+    background-image: url('../images/dirt.jpg');
+    margin: 5px 5px 5px 5px;
+    height: 30vh;
+    width: 95vw;
+
+}    

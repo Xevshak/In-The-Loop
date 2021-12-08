@@ -32,7 +32,7 @@ function Login(props) {
 
     } catch (e) {
       console.log(e);
-      swal("Login failed pleae check your Email or Password.");
+      swal("Login failed please check your Email or Password.");
     }
   };
 

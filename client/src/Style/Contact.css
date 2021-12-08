@@ -1,14 +1,16 @@
 #backgroundImg {
   background-image: url('../images/backgroundimg.jpg');
   background-size: cover;
-  height: 100%;
-  width: 100%;
+  height: auto;
+  width: 105%;
+
 }
 
 
 #flexRow {
   display: flex;
   flex-direction: column;
+
 }
 
 #header {
@@ -35,10 +37,27 @@
 }
 
 #Cards:hover {
-  max-width: none;
+  max-width: 60%;
   max-height: none;
   justify-content: center;
   box-shadow: 10px 10px 10px brown;
   color: brown;
 
+  position: relative;
+  left: 18%;
+
+
+
+}
+
+@media only screen and (max-width: 1200px) {
+  /*Tablets [601px -> 1200px]*/
+}
+
+@media only screen and (max-width: 600px) {
+  /*Big smartphones [426px -> 600px]*/
+}
+
+@media only screen and (max-width: 425px) {
+  /*Small smartphones [325px -> 425px]*/
 }

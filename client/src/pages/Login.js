@@ -3,6 +3,9 @@ import { useMutation } from '@apollo/client';
 import { Link } from 'react-router-dom';
 import { LOGIN_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
+import Button from '@mui/material/Button';
+import Btnimg from '../images/Btn.png'
+import '../Style/Login.css'
 
 const displayName = localStorage.getItem("username");
 
@@ -40,8 +43,12 @@ function Login(props) {
     });
   };
   return (
+    
+    <div id="loginForm" >
+      <p id="passwordTxt">User Email</p>
     <form onSubmit={handleFormSubmit}>
                 <input
+                id="emailPosition"
                   className="form-input"
                   placeholder="Your email"
                   name="email"
@@ -49,7 +56,10 @@ function Login(props) {
                   value={formState.email}
                   onChange={handleChange}
                 />
+                <p id="passwordTxt">Password</p>
                 <input
+                
+                id="passwordPosition"
                   className="form-input"
                   placeholder="******"
                   name="password"
@@ -57,15 +67,15 @@ function Login(props) {
                   value={formState.password}
                   onChange={handleChange}
                 />
-                <button
-                  className="btn btn-block btn-info"
-                  style={{ cursor: 'pointer' }}
-                  type="submit"
-                > Submit
-                  {/* the button can't link to dashboard or it executes without a login */}
-                 {/* <Link to={`/dashboard`}>Submit</Link> */}
-                </button>
+                
+                 <Button id="LogInBtn" variant="contained" style={{ backgroundImage: `url(${Btnimg})`, boxShadow: 'inset 2px 2px 1px ', border: '2px solid black', borderRadius: 0, cursor: 'pointer', paddingTop:'3px', fontFamily: 'SilkscreenNormal', display:'flex'}} sx={{margin: 1}}>Log In</Button>
+                 <Button id="goBackBtn">
+                 <pre> 
+                    <code>{`<`}</code></pre>
+                   Go Back
+                    </Button>
               </form>
+              </div>
   )};
 
 export default Login;

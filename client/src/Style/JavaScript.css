@@ -14,4 +14,12 @@
     height: 30vh;
     width: 95vw;
 
-}    
+}
+
+#username {
+    text-align: center;
+    padding: 5px;
+    color: #04D939;
+    text-shadow: 2px 2px 2px #050505, 0 0 .5em #04BFAD, 0 0 1em #f2f1f7;
+
+}

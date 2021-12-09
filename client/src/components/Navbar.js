@@ -4,7 +4,9 @@ import {Link} from 'react-router-dom'
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
+import Btnimg from '../images/Btn.png'
 import "../Style/Navbar.css"
+
 export default function Navbar () {
     const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -28,6 +30,8 @@ export default function Navbar () {
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
+        style={{ color: 'white', backgroundImage: `url(${Btnimg})`, boxShadow: 'inset 2px 2px 1px #e0e0e0', border: '2px solid black', borderRadius: 0, cursor: 'pointer', paddingTop:'3px' }}
+        sx={{margin: 1}}
       >
         Menu
       </Button>

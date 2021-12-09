@@ -45,9 +45,10 @@
   color: brown;
   position: relative;
   left: 18%;
+}
 
-
-
+#bio {
+  color: white;
 }
 
 @media only screen and (max-width: 1200px) {

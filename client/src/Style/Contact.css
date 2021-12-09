@@ -17,17 +17,18 @@
   position: relative;
   color: #04D939;
   max-width: fit-content;
-  text-shadow: 1px 1px 2px #023E73, 0 0 .5em #04BFAD, 0 0 1em #62A1D9;
+  text-shadow: 2px 2px 2px #050505, 0 0 .5em #04BFAD, 0 0 1em #62A1D9;
   -webkit-text-stroke: 0.6px rgb(0, 0, 0);
   font-family: Minecraft Evenings;
   width: 800px;
   font-size: 50px;
   text-align: center;
+
 }
 
 #Cards {
   color: #04D939;
-  text-shadow: 1px 1px 2px #023E73, 0 0 .5em #04BFAD, 0 0 1em #62A1D9;
+  text-shadow: 2px 2px 2px #000000, 0 0 .5em #04BFAD, 0 0 1em #62A1D9;
   position: relative;
   justify-content: center;
   box-shadow: 10px 10px 10px #04BFAD;
@@ -44,9 +45,10 @@
   color: brown;
   position: relative;
   left: 18%;
+}
 
-
-
+#bio {
+  color: white;
 }
 
 @media only screen and (max-width: 1200px) {

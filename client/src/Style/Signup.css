@@ -1,1 +1,55 @@
-/*helloworld*/
+
+#signUp {
+position: relative;
+  left: 12%;
+  align-items: center;
+  height: 280px;
+  width: 300px;
+  border: grey;
+  background-color: rgb(58, 54, 54);
+    margin: 0;
+}
+
+#userPos {
+    position: relative;
+    left: 20%;
+    margin: 0 20px 20px 20px;
+}
+
+#emailPos {
+    position: relative;
+    left: 20%;
+    margin:  0 20px 20px 20px;
+}
+
+#passPos {
+    position: relative;
+    left: 20%;
+    margin: 0 20px 10px 20px;
+}
+
+#signBtn1 {
+    position: relative;
+    left:33%;
+}
+
+#goBackBtn2 {
+    position: relative;
+    left: 33%;
+    color: white;
+}
+
+#goBackBtn2:hover {
+    position: relative;
+    left: 33%;
+    color: aqua;
+}
+
+#passwordTxt2 {
+    color: white;
+    position: relative;
+    text-align: center;
+    font-weight: bolder;
+    margin: 0;
+  }
+

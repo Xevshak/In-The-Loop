@@ -8,6 +8,10 @@ import { ADD_USER } from '../utils/mutations';
 import swal from 'sweetalert';
 import Auth from '../utils/auth';
 
+import Btnimg from '../images/Btn.png'
+import Button from '@mui/material/Button'
+import '../Style/Signup.css'
+
 const displayName = localStorage.getItem("username");
 
 function Signup(props) {
@@ -52,17 +56,25 @@ function Signup(props) {
   };
 
   return (
-      <div>
-              <form onSubmit={handleFormSubmit}>
-                <input
+
+            <div id='signUp'>
+              <form onSubmit={handleFormSubmit} sx={{margin:1}}>
+              <p id="passwordTxt2" >User Name</p>
+                <input 
+                  id= 'userPos'
+
                   className="form-input"
                   placeholder="Your username"
                   name="username"
                   type="text"
                   value={formState.username}
                   onChange={handleChange}
+                  style={{}}
+                  sx={{margin:1}}
                 />
+                <p id="passwordTxt2" >User Email</p>
                 <input
+                  id= 'emailPos'
                   className="form-input"
                   placeholder="Your email"
                   name="email"
@@ -70,7 +82,9 @@ function Signup(props) {
                   value={formState.email}
                   onChange={handleChange}
                 />
+                <p id="passwordTxt2" >Password</p>
                 <input
+                  id= 'passPos'
                   className="form-input"
                   placeholder="******"
                   name="password"
@@ -78,18 +92,23 @@ function Signup(props) {
                   value={formState.password}
                   onChange={handleChange}
                 />
-                <button
-                id="submitSig"  className="btn btn-block btn-info"
-                  style={{ cursor: 'pointer' }}
-                  type="submit"
-                >Submit
-                  {/* <Link to={`/js`}>Submit</Link>  */}
-                </button>
+
+                
+                <Button variant="contained" type="submit" id='signBtn1' style={{ backgroundImage: `url(${Btnimg})`, boxShadow: 'inset 2px 2px 1px #e0e0e0', border: '2px solid black', borderRadius: 0, cursor: 'pointer', paddingTop:'3px', fontFamily: 'SilkscreenNormal', display:'flex' }} sx={{margin: 1}}>Sign Up</Button>
+                <Link to={"/"}><Button id="goBackBtn2">
+                 <pre> 
+                    <code>{`<`}</code></pre>
+                   Go Back
+                    </Button></Link>
+
               </form>
-              <Link to={"/"}><button>Go back</button></Link>
-        </div>
+
+            
+            </div>
             
   )
 };
 
 export default Signup;
+
+// <Link to={`/login`} style={{textDecoration: 'none', color: 'white', fontFamily: 'SilkscreenNormal'}}

@@ -19,14 +19,14 @@ export default function JavaScript () {
             <h1 id='username'>{displayName} is In the Loop!</h1>
             <Navbar/>
             <div id="creepBox"><Forloop creep={value}/></div>
-                <pre className='card'>
+                <pre className='cardFor'>
                     <code>
-                        <span>
+                        <span id="forText">
 {`for (let i = 0; i <`}
                         </span> 
                         <span> 
                             <form>
-                                <label>            
+                                <label id="forDrop">            
                                     <select value={value} onChange={handleChange}>
                                     <option value='0'>0</option>
                                     <option value='5'>5</option>
@@ -37,9 +37,9 @@ export default function JavaScript () {
                                 </label>          
                             </form>
                         </span>
-                        <span>
-{`; i++) {
-    creeper += creeper[i];
+                        <span id="forText2">
+{`; i++) { `}</span><span id='forText3'>
+    {`creeper += creeper[i];`}</span><span id="bracket">{`
 }`}</span>
                 </code>
             </pre>

@@ -1,10 +1,14 @@
-.card {
+.cardFor {
     color: white;
     border: 2px single grey;
     background-color: grey;
     margin: 20px 5px 5px 5px;
     height: 20vh;
     width: 95vw;
+    border: 4mm ridge #a7a7a7;
+    text-align: center;
+
+
 }
 
 #creepBox {
@@ -14,4 +18,48 @@
     height: 30vh;
     width: 95vw;
 
-}    
+}   
+
+#forText {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    left: 20%;
+    bottom: 1px;
+
+   
+    
+}
+
+#forDrop {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    left: 60%;
+    bottom: 20px;
+}
+
+#forText2 {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    left: 70%;
+    bottom: 38px;
+}
+
+#forText3 {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    left: 30%;
+    bottom: 20px
+}
+
+#bracket {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    left: 20%;
+    bottom: 30px
+}
+

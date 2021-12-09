@@ -65,7 +65,7 @@ export default function Quiz3() {
       >
         <FormLabel component="legend" style={styles.quiz}>What does the i++ do in a for loop?</FormLabel>
         <div style={{backgroundImage: `url(${Nether})`, color: "white"}}>
-        <RadioGroup style={{backgroundImage: `url(${Nether})`, color: "white", width: "87vw", display: "flex", "justifyContent": "center"}}
+        <RadioGroup style={{backgroundImage: `url(${Nether})`, color: "white", maxWidth: "50vw", width: "87vw", display: "flex", "justifyContent": "center"}}
           aria-label="quiz"
           name="quiz"
           value={value}

@@ -26,7 +26,7 @@ export default function Navbar () {
       
         <div>
       <Button
-        id="basic-button"
+        id="basic-button menu"
         className="menBtn"
         aria-controls="basic-menu"
         aria-haspopup="true"

@@ -5,6 +5,7 @@
     margin: 20px 5px 5px 5px;
     height: 20vh;
     width: 95vw;
+    max-width: 88vw;
     border: 4mm ridge #a7a7a7;
     text-align: center;
 
@@ -26,7 +27,7 @@
     display: flex;
     flex-direction: row;
     position: relative;
-    left: 20%;
+    left: 12%;
     bottom: 1px;
 
    
@@ -45,7 +46,7 @@
     display: flex;
     flex-direction: row;
     position: relative;
-    left: 70%;
+    left: 71%;
     bottom: 38px;
 }
 
@@ -66,7 +67,6 @@
 }
 
 
-}
 
 #username {
     text-align: center;

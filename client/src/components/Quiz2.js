@@ -65,7 +65,7 @@ export default function Quiz2() {
       >
         <FormLabel component="legend" style={styles.quiz}> If the array is [1, 2, 3 , 4], what number do we type in after the i?</FormLabel>
         <div style={{backgroundImage: `url(${Nether})`, color: "white"}}>
-        <RadioGroup style={{backgroundImage: `url(${Nether})`, color: "white", width: "87vw", display: "flex", "justifyContent": "center"}}
+        <RadioGroup style={{backgroundImage: `url(${Nether})`, color: "white", maxWidth: "50vw", width: "87vw", display: "flex", "justifyContent": "center"}}
           aria-label="quiz"
           name="quiz"
           value={value}

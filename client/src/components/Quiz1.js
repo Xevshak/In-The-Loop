@@ -67,7 +67,7 @@ export default function Quiz() {
       >
         <FormLabel component="legend" style={styles.quiz}>Which one of the following is a functional for loop?</FormLabel>
         <div style={{backgroundImage: `url(${Nether})`, color: "white"}}>
-        <RadioGroup style={{backgroundImage: `url(${Nether})`, color: "white", width: "87vw", display: "flex", "justifyContent": "center"}}
+        <RadioGroup style={{backgroundImage: `url(${Nether})`, maxWidth: "50vw", color: "white", width: "87vw", display: "flex", "justifyContent": "center"}}
           aria-label="quiz"
           name="quiz"
           value={value}
@@ -79,7 +79,7 @@ export default function Quiz() {
           <FormControlLabel value="worst2" control={<Radio />} label="for (let 0 = 1; i < arr.length; i-+)" />
           </RadioGroup>
 
-        <FormHelperText style={{color: "white", fontSize: "15px"}} >{helperText}</FormHelperText>
+        <FormHelperText style={{color: "white", fontSize: "15px", width: "87vw"}} >{helperText}</FormHelperText>
         </div>
         <Button style={{color: "white", fontSize: "17px"}} sx={{ mt: 1, mr: 1 }} type="submit" variant="outlined">
           Check Answer

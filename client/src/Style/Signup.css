@@ -42,7 +42,7 @@ position: relative;
 #goBackBtn2:hover {
     position: relative;
     left: 33%;
-    color: aqua;
+    color: #04D939;
 }
 
 #passwordTxt2 {
@@ -53,3 +53,8 @@ position: relative;
     margin: 0;
   }
 
+  #signBtn1:hover {
+    position: relative;
+    left: 33%;
+    color: #04D939;
+  }

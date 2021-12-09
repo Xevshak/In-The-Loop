@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
 
+
+import swal from 'sweetalert';
 import Auth from '../utils/auth';
 
 const displayName = localStorage.getItem("username");
@@ -29,7 +31,11 @@ function Signup(props) {
   // submit form
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-    console.log(formState);
+    // let myGreeting = setTimeout(() => {
+    //   alert('Hello, Mr. Universe!');
+    // }, 2000);
+    // console.log(myGreeting);
+    
 
     try {
       const { data } = await addUser({
@@ -41,11 +47,12 @@ function Signup(props) {
       localStorage.setItem("username", `${formState.username}`);
     } catch (e) {
       console.error(e);
+      swal("Oops! Something went wrong are sure you are not already a member?");
     }
   };
 
   return (
-    
+      <div>
               <form onSubmit={handleFormSubmit}>
                 <input
                   className="form-input"
@@ -72,13 +79,15 @@ function Signup(props) {
                   onChange={handleChange}
                 />
                 <button
-                  className="btn btn-block btn-info"
+                id="submitSig"  className="btn btn-block btn-info"
                   style={{ cursor: 'pointer' }}
                   type="submit"
                 >Submit
-                  {/* <Link to={`/dashboard`}>Submit</Link>  */}
+                  {/* <Link to={`/js`}>Submit</Link>  */}
                 </button>
               </form>
+              <Link to={"/"}><button>Go back</button></Link>
+        </div>
             
   )
 };

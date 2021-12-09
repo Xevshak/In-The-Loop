@@ -3,6 +3,9 @@ import { useMutation } from '@apollo/client';
 import { Link } from 'react-router-dom';
 import { LOGIN_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
+import swal from 'sweetalert';
+
+
 
 const displayName = localStorage.getItem("username");
 
@@ -29,6 +32,7 @@ function Login(props) {
 
     } catch (e) {
       console.log(e);
+      swal("Login failed please check your Email or Password.");
     }
   };
 
@@ -40,7 +44,8 @@ function Login(props) {
     });
   };
   return (
-    <form onSubmit={handleFormSubmit}>
+    <div>
+              <form onSubmit={handleFormSubmit}>
                 <input
                   className="form-input"
                   placeholder="Your email"
@@ -63,9 +68,11 @@ function Login(props) {
                   type="submit"
                 > Submit
                   {/* the button can't link to dashboard or it executes without a login */}
-                 {/* <Link to={`/dashboard`}>Submit</Link> */}
+                
                 </button>
               </form>
+            <Link to={"/"}><button>Go back</button></Link>
+    </div>
   )};
 
 export default Login;

@@ -71,8 +71,8 @@ export default function Quiz2() {
           value={value}
           onChange={handleRadioChange}
         >
-          <FormControlLabel value="worst2" control={<Radio />} label="i < 4" />
-          <FormControlLabel value="best" control={<Radio />} label="i < 3" />
+          <FormControlLabel value="worst2" control={<Radio />} label="i < 3" />
+          <FormControlLabel value="best" control={<Radio />} label="i < 4" />
           <FormControlLabel value="worst" control={<Radio />} label="i < 1" />
           <FormControlLabel value="worst1" control={<Radio />} label="i < 5" />
         </RadioGroup>

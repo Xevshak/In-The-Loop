@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
 
+
+import swal from 'sweetalert';
 import Auth from '../utils/auth';
 
 import Btnimg from '../images/Btn.png'
@@ -33,7 +35,11 @@ function Signup(props) {
   // submit form
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-    console.log(formState);
+    // let myGreeting = setTimeout(() => {
+    //   alert('Hello, Mr. Universe!');
+    // }, 2000);
+    // console.log(myGreeting);
+    
 
     try {
       const { data } = await addUser({
@@ -45,15 +51,18 @@ function Signup(props) {
       localStorage.setItem("username", `${formState.username}`);
     } catch (e) {
       console.error(e);
+      swal("Oops! Something went wrong are sure you are not already a member?");
     }
   };
 
   return (
+
             <div id='signUp'>
               <form onSubmit={handleFormSubmit} sx={{margin:1}}>
               <p id="passwordTxt2" >User Name</p>
                 <input 
                   id= 'userPos'
+
                   className="form-input"
                   placeholder="Your username"
                   name="username"
@@ -83,14 +92,17 @@ function Signup(props) {
                   value={formState.password}
                   onChange={handleChange}
                 />
+
                 
-                <Button variant="contained" id='signBtn1' style={{ backgroundImage: `url(${Btnimg})`, boxShadow: 'inset 2px 2px 1px #e0e0e0', border: '2px solid black', borderRadius: 0, cursor: 'pointer', paddingTop:'3px', fontFamily: 'SilkscreenNormal', display:'flex' }} sx={{margin: 1}}>Sign Up</Button>
-                <Button id="goBackBtn2">
+                <Button variant="contained" type="submit" id='signBtn1' style={{ backgroundImage: `url(${Btnimg})`, boxShadow: 'inset 2px 2px 1px #e0e0e0', border: '2px solid black', borderRadius: 0, cursor: 'pointer', paddingTop:'3px', fontFamily: 'SilkscreenNormal', display:'flex' }} sx={{margin: 1}}>Sign Up</Button>
+                <Link to={"/"}><Button id="goBackBtn2">
                  <pre> 
                     <code>{`<`}</code></pre>
                    Go Back
-                    </Button>
+                    </Button></Link>
+
               </form>
+
             
             </div>
             

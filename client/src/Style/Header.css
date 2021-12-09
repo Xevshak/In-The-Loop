@@ -1,0 +1,38 @@
+#title {
+  max-width: fit-content;
+  display: flex;
+  background-color: none;
+  font-size: 60px;
+  font-family: 'Minecraft Evenings';
+  color: #C7BCB9;
+  box-shadow: 10px 10px 10px #02f8e0;
+  text-shadow: 1px 1px 2px #023E73, 0 0 1em #026873, 0 0 0.2em #62A1D9;
+  -webkit-text-stroke: 0.1px rgb(41, 40, 40);
+  border: 4mm ridge #04D939;
+  position: relative;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  left: 1rem;
+
+  transform: scale(1);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(17, 239, 246, 0);
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+

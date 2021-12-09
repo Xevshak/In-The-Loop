@@ -1,0 +1,12 @@
+.loginBtn {
+    width: 100%;
+}
+
+.loginBtn:hover {
+    background-color:green;
+}
+#homeText {
+    -webkit-text-stroke: 1px rgb(7, 7, 7);
+    font-size: 2em;
+    text-align: center;
+}

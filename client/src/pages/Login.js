@@ -44,7 +44,8 @@ function Login(props) {
     });
   };
   return (
-    <form onSubmit={handleFormSubmit}>
+    <div>
+              <form onSubmit={handleFormSubmit}>
                 <input
                   className="form-input"
                   placeholder="Your email"
@@ -70,6 +71,8 @@ function Login(props) {
                 
                 </button>
               </form>
+            <Link to={"/"}><button>Go back</button></Link>
+    </div>
   )};
 
 export default Login;

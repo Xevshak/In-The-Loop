@@ -52,7 +52,7 @@ function Signup(props) {
   };
 
   return (
-    
+      <div>
               <form onSubmit={handleFormSubmit}>
                 <input
                   className="form-input"
@@ -86,6 +86,8 @@ function Signup(props) {
                   {/* <Link to={`/js`}>Submit</Link>  */}
                 </button>
               </form>
+              <Link to={"/"}><button>Go back</button></Link>
+        </div>
             
   )
 };

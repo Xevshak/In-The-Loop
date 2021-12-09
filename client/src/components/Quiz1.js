@@ -7,6 +7,26 @@ import FormHelperText from '@mui/material/FormHelperText';
 import FormLabel from '@mui/material/FormLabel';
 import Button from '@mui/material/Button';
 import "../Style/Quiz.css"
+import Obsidian from "../images/obsidian.png"
+import Nether from "../images/nether.png"
+
+const styles = {
+  card: {
+      display: "flex",
+      justifyContent: "center",
+      flexWrap: "wrap",
+      fontSize: "200px !important"
+      
+      
+  },
+  quiz: {
+      diplay: "flex",
+      textAlign: "center",
+      fontSize: '2rem',
+      color: 'white'
+  }
+}
+
 export default function Quiz() {
   const [value, setValue] = React.useState('');
   const [error, setError] = React.useState(false);
@@ -37,31 +57,39 @@ export default function Quiz() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <FormControl
+    <div style={{backgroundImage: `url(${Obsidian})`, width: "95vw", margin: "25px 5px 25px 5px"}}>
+    <form onSubmit={handleSubmit} style={styles.card}>
+      <FormControl 
         sx={{ m: 3 }}
         component="fieldset"
         error={error}
         variant="standard"
       >
-        <FormLabel component="legend">Pop quiz: MUI is...</FormLabel>
-        <RadioGroup
+        <FormLabel component="legend" style={styles.quiz}>Which one of the following is a functional for loop?</FormLabel>
+        <div style={{backgroundImage: `url(${Nether})`, color: "white"}}>
+        <RadioGroup style={{backgroundImage: `url(${Nether})`, color: "white", width: "87vw", display: "flex", "justifyContent": "center"}}
           aria-label="quiz"
           name="quiz"
           value={value}
           onChange={handleRadioChange}
         >
-          <FormControlLabel value="best" control={<Radio />} label="Keshav has great hair" />
-          <FormControlLabel value="worst2" control={<Radio />} label="The worst." />
-          <FormControlLabel value="worst3" control={<Radio />} label="Keshav has great hair" />
-        </RadioGroup>
-        <FormHelperText>{helperText}</FormHelperText>
-        <Button sx={{ mt: 1, mr: 1 }} type="submit" variant="outlined">
+          <FormControlLabel value="best" control={<Radio />} label="for (let i = 0; i < arr.length; i++)" />
+          <FormControlLabel value="worst" control={<Radio />} label="for (let 0 = i; i < arr.length; i++)" />
+          <FormControlLabel value="worst1" control={<Radio />} label="for (i = 0; i < arr.length; i++)" />
+          <FormControlLabel value="worst2" control={<Radio />} label="for (let 0 = 1; i < arr.length; i-+)" />
+          </RadioGroup>
+
+        <FormHelperText style={{color: "white", fontSize: "15px"}} >{helperText}</FormHelperText>
+        </div>
+        <Button style={{color: "white", fontSize: "17px"}} sx={{ mt: 1, mr: 1 }} type="submit" variant="outlined">
           Check Answer
         </Button>
       </FormControl>
+      
     </form>
+    </div>
   );
+  
 }
 
 

@@ -6,7 +6,6 @@ import FormControl from '@mui/material/FormControl';
 import FormHelperText from '@mui/material/FormHelperText';
 import FormLabel from '@mui/material/FormLabel';
 import Button from '@mui/material/Button';
-import "../Style/Quiz.css"
 import Obsidian from "../images/obsidian.png"
 import Nether from "../images/nether.png"
 
@@ -91,8 +90,3 @@ export default function Quiz() {
   );
   
 }
-
-
-
-
-

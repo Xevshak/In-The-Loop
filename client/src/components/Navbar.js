@@ -1,13 +1,10 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-
 import Auth from '../utils/auth';
-
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Btnimg from '../images/Btn.png'
-import "../Style/Navbar.css"
 
 export default function Navbar () {
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -18,9 +15,7 @@ export default function Navbar () {
 
   const handleClose = () => {
     setAnchorEl(null);
-  };
-  // document.getElementById("signout").addEventListener("click", function(){ localStorage.removeItem("username"); });
-  
+  }; 
 
     return(
       
@@ -47,14 +42,12 @@ export default function Navbar () {
           'aria-labelledby': 'basic-button',
         }}
       >
-
-        {/* <MenuItem  onClick={handleClose}><Link to={`/dashboard`}>Dashboard</Link></MenuItem> */}
         <MenuItem  onClick={handleClose}><Link to={`/js`}>JavaScript</Link></MenuItem>
         <MenuItem onClick={handleClose}>CSS</MenuItem>
         <MenuItem onClick={handleClose}>HTML</MenuItem>
         <MenuItem  onClick={handleClose}><Link to={`/contacts`}>Contact Us</Link></MenuItem>
         <MenuItem  onClick={Auth.logout}><Link to={`/`}>Sign Out</Link></MenuItem>
-        {/* need to link to logout function */}
+
       </Menu>
     </div>
     )

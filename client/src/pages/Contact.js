@@ -5,8 +5,6 @@ import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-//import { Theme } from '@mui/material/styles';
-//import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box'
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -17,15 +15,10 @@ import Chrisimg from '../images/Chris.PNG'
 import Keshavimg from '../images/Keshav.PNG'
 import  Chamoimg from '../images/Chamo.PNG'
 import  Stephimg from '../images/Stephimg.jpg'
-
 import Navbar from '../components/Navbar'
-
 const displayName = localStorage.getItem("username");
 
 export default function Contact () {
-
-
-
     return(
         <div id="backgroundImg">
           <h1 id='username'>{displayName} is In the Loop!</h1>

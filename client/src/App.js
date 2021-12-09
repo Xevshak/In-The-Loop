@@ -9,11 +9,9 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 import './App.css';
-
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import JavaScript from './pages/JavaScript';
-// import Dashboard from './pages/Dashboard';
 import Contact from './pages/Contact'
 import Footer from './components/Footer';
 import Header from './components/Header';

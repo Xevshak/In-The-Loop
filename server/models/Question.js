@@ -5,9 +5,6 @@ const questionSchema = new Schema({
      type:String,
      required: true,
     },
-    // correct: {
-    //  type: Boolean,
-    // },
     title: {
      type: String,
      required: true

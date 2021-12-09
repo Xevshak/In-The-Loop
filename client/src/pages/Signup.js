@@ -1,13 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
-
-
 import swal from 'sweetalert';
 import Auth from '../utils/auth';
-
 import Btnimg from '../images/Btn.png'
 import Button from '@mui/material/Button'
 import '../Style/Signup.css'
@@ -35,17 +31,11 @@ function Signup(props) {
   // submit form
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-    // let myGreeting = setTimeout(() => {
-    //   alert('Hello, Mr. Universe!');
-    // }, 2000);
-    // console.log(myGreeting);
-    
 
     try {
       const { data } = await addUser({
         variables: { username: formState.username,  email: formState.email, password: formState.password},
       });
-      console.log(formState);
 
       Auth.login(data.addUser.token);
       localStorage.setItem("username", `${formState.username}`);
@@ -110,5 +100,3 @@ function Signup(props) {
 };
 
 export default Signup;
-
-// <Link to={`/login`} style={{textDecoration: 'none', color: 'white', fontFamily: 'SilkscreenNormal'}}

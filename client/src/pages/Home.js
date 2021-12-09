@@ -3,17 +3,13 @@ import { Link } from 'react-router-dom'
 import Btnimg from '../images/Btn.png'
 import '../Style/Home.css'
 import Footer from '../components/Footer'
-
-//import ReactDOM from 'react-dom';
 import { Typography } from '@mui/material'
 import Button from '@mui/material/Button';
 import Box  from '@mui/material/Box'
 import Card from '@mui/material/Card'
 import { CardContent } from '@mui/material'
 
-
 export default function Home () {
-    
     return(
         <div>
             <Typography id='homeText' style={{fontFamily: 'Minecraft', color: 'white'}}>Learn How To Code The Fun Way</Typography>

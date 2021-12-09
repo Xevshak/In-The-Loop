@@ -17,7 +17,6 @@ const resolvers = {
 
   Mutation: {
     addUser: async (parent, args) => {
-      console.log(args);
       const user = await User.create(args);
       const token = signToken(user);
 
@@ -42,8 +41,6 @@ const resolvers = {
     progress: async (parent, { questionId, userId }, context) => {
       if (context.user) {
         const updatedUser = await User.findByIdAndUpdate(
-          // { _id: context.user._id },
-          //remove after testing and uncomment line 44
           { _id: userId },
           { $push: { progress: questionId } },
           { new: true }

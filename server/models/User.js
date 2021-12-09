@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema
 const bcrypt = require('bcrypt');
-
 const ObjectId = Schema.Types.ObjectId;
 
 const userSchema = new Schema(
@@ -47,4 +46,3 @@ userSchema.methods.isCorrectPassword = async function (password) {
 const User = mongoose.model('User', userSchema);
 
 module.exports = User;
-

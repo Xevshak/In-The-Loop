@@ -15,7 +15,11 @@ export default function Navbar () {
   const handleClose = () => {
     setAnchorEl(null);
   };
+  // document.getElementById("signout").addEventListener("click", function(){ localStorage.removeItem("username"); });
+  
+
     return(
+      
         <div>
       <Button
         id="basic-button"

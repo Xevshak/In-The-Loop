@@ -6,6 +6,24 @@ import FormControl from '@mui/material/FormControl';
 import FormHelperText from '@mui/material/FormHelperText';
 import FormLabel from '@mui/material/FormLabel';
 import Button from '@mui/material/Button';
+import Obsidian from "../images/obsidian.png"
+import Nether from "../images/nether.png"
+
+const styles = {
+  card: {
+      display: "flex",
+      justifyContent: "center",
+      flexWrap: "wrap",
+      
+      
+  },
+  quiz: {
+      diplay: "flex",
+      textAlign: "center",
+      fontSize: '2rem',
+      color: 'white'
+  }
+}
 
 export default function Quiz3() {
   const [value, setValue] = React.useState('');
@@ -37,29 +55,34 @@ export default function Quiz3() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <div style={{backgroundImage: `url(${Obsidian})`, width: "95vw", margin: "25px 5px 25px 5px"}}>
+    <form onSubmit={handleSubmit}  style={styles.card}>
       <FormControl
         sx={{ m: 3 }}
         component="fieldset"
         error={error}
         variant="standard"
       >
-        <FormLabel component="legend">Pop quiz: MUI is...</FormLabel>
-        <RadioGroup
+        <FormLabel component="legend" style={styles.quiz}>What does the i++ do in a for loop?</FormLabel>
+        <div style={{backgroundImage: `url(${Nether})`, color: "white"}}>
+        <RadioGroup style={{backgroundImage: `url(${Nether})`, color: "white", width: "87vw", display: "flex", "justifyContent": "center"}}
           aria-label="quiz"
           name="quiz"
           value={value}
           onChange={handleRadioChange}
         >
-          <FormControlLabel value="best" control={<Radio />} label="Keshav has great hair" />
-          <FormControlLabel value="worst2" control={<Radio />} label="The worst." />
-          <FormControlLabel value="worst3" control={<Radio />} label="Keshav has great hair" />
-        </RadioGroup>
-        <FormHelperText>{helperText}</FormHelperText>
-        <Button sx={{ mt: 1, mr: 1 }} type="submit" variant="outlined">
+          <FormControlLabel value="worst2" control={<Radio />} label="subtracts the index position from the current position" />
+          <FormControlLabel value="worst" control={<Radio />} label="adds 2 to the end of the array" />
+          <FormControlLabel value="worst1" control={<Radio />} label="it doesnt do anything" />
+          <FormControlLabel value="best" control={<Radio />} label="increases the index by 1 each loop" />
+          </RadioGroup>
+        <FormHelperText style={{color: "white", fontSize: "15px"}}>{helperText}</FormHelperText>
+        </div>
+        <Button style={{color: "white", fontSize: "17px"}} sx={{ mt: 1, mr: 1 }} type="submit" variant="outlined">
           Check Answer
         </Button>
       </FormControl>
     </form>
+    </div>
   );
 }

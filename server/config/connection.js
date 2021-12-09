@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 mongoose.connect(
-  'mongodb+srv://mongodbatlas:mongodb@getfit-fitness-tracker.wupok.mongodb.net/userdb',
+  'mongodb+srv://loopers:Loop@cluster0.nkcnk.mongodb.net/userdb?retryWrites=true&w=majority',
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,

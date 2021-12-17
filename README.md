@@ -7,7 +7,7 @@ Live Link: https://intheloop-app.herokuapp.com/
 Contributors: Stephanie Cortez, Bradley O'Dell, Christopher Kennard, Yamil Chamochumbi, Keshav Krishnan
 ## Description
 
-In The Loop is a web based full-stack application designed to teach users about loopsd and how to effectively utilize them.  Many other kinds of online "coding workbooks" exist, but very few focus on loops directly.  We thought this problem could be solved, and so we created In The Loop!  In creating this application, we learned to effectively link MongoDB databased using graphql and apollo into one application, with a frontend powered by react.
+In The Loop is a web based full-stack application designed to teach users about loops and how to effectively utilize them.  Many other kinds of online "coding workbooks" exist, but very few focus on loops directly.  We thought this problem could be solved, and so we created In The Loop!  In creating this application, we learned to effectively link MongoDB databased using graphql and apollo into one application, with a frontend powered by react.
 
 
 
